@@ -22,6 +22,44 @@
       line-height: 1.9;
     }
 
+    /* Top Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      font-size: 1.1rem;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.93)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
       height: 100vh;
@@ -31,6 +69,7 @@
       justify-content: center;
       text-align: center;
       padding: 0 20px;
+      margin-top: 80px;
     }
 
     .hero h1 {
@@ -129,6 +168,29 @@
       max-width: 760px;
     }
 
+    .how-it-works {
+      background: #111;
+      padding: 100px 20px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
     .disclaimer {
       text-align: center;
       margin: 110px auto;
@@ -149,6 +211,20 @@
 </head>
 <body>
 
+  <!-- TOP NAVIGATION -->
+  <nav>
+    <div class="logo">Omega Global</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#plans">Plans</a>
+      <a href="#how">How It Works</a>
+      <a href="#">Referral</a>
+    </div>
+    <div>
+      <button class="btn btn-green">Connect Wallet</button>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <section class="hero">
     <div>
@@ -163,7 +239,7 @@
   </section>
 
   <!-- PLANS -->
-  <section class="section">
+  <section class="section" id="plans">
     <h2>Our Rectification Yield Tiers</h2>
     <p style="text-align:center; max-width:780px; margin:0 auto 75px; color:#ccc; font-size:1.2rem;">
       Sustainable weekly yields powered by transparent on-chain strategies.<br>
@@ -217,7 +293,7 @@
     </div>
   </section>
 
-  <!-- REFERRAL BONUS -->
+  <!-- REFERRAL -->
   <section class="section" style="padding-top:0;">
     <div class="referral-box">
       <h3 style="color:var(--accent); font-size:2.3rem; margin-bottom:28px;">🎁 Earn 7% Referral Bonus</h3>
@@ -226,6 +302,33 @@
         Your friends also receive a bonus. Build passive income while growing the Omega community.
       </p>
       <button class="btn btn-green" style="margin-top:40px;">Get Your Referral Link</button>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-it-works" id="how">
+    <h2>How Blockchain Rectification Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h4>Deposit & Verify</h4>
+        <p>Make your deposit. Your assets are immediately secured and verified on the blockchain.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h4>Rectification Process</h4>
+        <p>Your investment is recorded immutably. Rectification ensures transparency and security.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h4>On-Chain Yield Generation</h4>
+        <p>Funds are deployed into diversified strategies (staking, lending, restaking).</p>
+      </div>
+      <div class="step">
+        <div class="step-number">04</div>
+        <h4>Weekly Payouts & Withdrawal</h4>
+        <p>Receive weekly returns. Withdraw anytime with full on-chain proof.</p>
+      </div>
     </div>
   </section>
 
