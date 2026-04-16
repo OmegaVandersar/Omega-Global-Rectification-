@@ -3,135 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Center - Omega Global Rectification</title>
+  <title>Support Center - Omega Global</title>
   <style>
     :root { --accent: #00ff9d; }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
-      line-height: 1.8;
-    }
+    body { font-family:Arial,sans-serif; background:#0a0a0a; color:#fff; }
     nav {
-      position: fixed;
-      top: 0; width: 100%;
-      background: rgba(10,10,10,0.98);
-      backdrop-filter: blur(12px);
-      z-index: 1000;
-      padding: 20px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
+      position:fixed; top:0; width:100%; background:rgba(10,10,10,0.98);
+      padding:18px 5%; display:flex; justify-content:space-between; align-items:center;
+      border-bottom:1px solid #222;
     }
-    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
-    .nav-links a {
-      color: #ddd; text-decoration: none; margin-left: 35px; transition: color 0.3s;
+    .logo { font-size:1.65rem; font-weight:600; color:var(--accent); }
+    .hero { 
+      background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('https://picsum.photos/id/1015/2000/1200') center/cover;
+      height:45vh; margin-top:80px; display:flex; align-items:center; justify-content:center;
+      text-align:center;
     }
-    .nav-links a:hover { color: var(--accent); }
-
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
-      height: 45vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin-top: 80px;
-    }
-    .hero h1 { font-size: 3.4rem; font-weight: 600; letter-spacing: -1px; }
-
     .support-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px;
-      max-width: 1280px;
-      margin: 90px auto;
-      padding: 0 20px;
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:25px; max-width:1280px; margin:80px auto; padding:0 20px;
     }
     .support-card {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
+      background:#1a1a1a; border:1px solid #333; border-radius:20px;
+      padding:35px 25px; text-align:center; transition:all .4s;
     }
-    .support-card:hover {
-      transform: translateY(-12px);
-      border-color: var(--accent);
-      box-shadow: 0 20px 40px rgba(0,255,157,0.15);
-    }
-    .support-card .icon {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .support-card h3 {
-      color: var(--accent);
-      font-size: 1.55rem;
-      margin-bottom: 12px;
-    }
-    .support-card p {
-      color: #ccc;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: #0a0a0a;
-      border-top: 1px solid #222;
-    }
+    .support-card:hover { border-color:var(--accent); transform:translateY(-8px); }
+    .support-card h3 { color:var(--accent); margin:15px 0 10px; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <div class="logo">Omega Global</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#plans">Plans</a>
-      <a href="index.html#how">How It Works</a>
-      <a href="support.html">Support</a>
-      <a href="index.html#referral">Referral</a>
-    </div>
-    <button onclick="location.href='index.html'" style="background:#00ff9d;color:#000;padding:12px 32px;border-radius:50px;font-weight:700;border:none;cursor:pointer;">Connect Wallet</button>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
+  <div class="hero">
     <div>
-      <h1>Support Center</h1>
-      <p style="font-size:1.45rem;margin-top:20px;opacity:0.9;">Get help fast. Professional assistance for every issue.</p>
+      <h1 style="font-size:3.2rem;">Support Center</h1>
     </div>
-  </section>
-
-  <!-- PREMIUM SUPPORT GRID -->
-  <div class="support-grid">
-    <div class="support-card"><span class="icon">✅</span><h3>Claim V2</h3><p>Click here if you have issues claiming V2 rewards.</p></div>
-    <div class="support-card"><span class="icon">🌾</span><h3>Farm Issues</h3><p>Click here for farm-related issues.</p></div>
-    <div class="support-card"><span class="icon">🔖</span><h3>Whitelist Issues</h3><p>Click here for help whitelisting your wallets for NFTs.</p></div>
-    <div class="support-card"><span class="icon">🖼️</span><h3>NFTs Issues</h3><p>Click here to mint/transfer NFTs or receive support.</p></div>
-    <div class="support-card"><span class="icon">💼</span><h3>Trading Wallet Issues</h3><p>Click here if you have any issue related to your wallet.</p></div>
-    <div class="support-card"><span class="icon">🚫</span><h3>Access Denied</h3><p>Unable to buy tokens/coins — your account must be marked as trusted.</p></div>
-    <div class="support-card"><span class="icon">🔑</span><h3>Login Issues</h3><p>Click here if you encounter an issue logging into your account.</p></div>
-    <div class="support-card"><span class="icon">❌</span><h3>Transaction Error</h3><p>Click here if you are facing any error while trying to make a transaction.</p></div>
-    <div class="support-card"><span class="icon">🔗</span><h3>Bridge Token</h3><p>Click here for issues while trying to transfer tokens between chains.</p></div>
-    <div class="support-card"><span class="icon">💧</span><h3>Liquidity</h3><p>Click here for liquidity related issues.</p></div>
-    <div class="support-card"><span class="icon">🔄</span><h3>Swap/Exchange</h3><p>Click here for swap or exchange related issues.</p></div>
-    <div class="support-card"><span class="icon">⏳</span><h3>Transaction Delay</h3><p>Click here for stuck/delayed transactions.</p></div>
-    <div class="support-card"><span class="icon">📈</span><h3>Staking Issues</h3><p>Click here for tokens/coins staking related issues.</p></div>
   </div>
 
-  <footer>
-    <p>&copy; 2020 Omega Global Rectification. All Rights Reserved.</p>
-    <p style="margin-top:25px;">Secure • Transparent • Blockchain Powered</p>
-  </footer>
+  <div class="support-grid">
+    <div class="support-card" onclick="location.href='login.html'"><h3>Login Issues</h3><p>Click here if you have trouble logging in</p></div>
+    <div class="support-card" onclick="location.href='register.html'"><h3>Create Account</h3><p>Need help creating your account?</p></div>
+    <div class="support-card"><h3>Claim V2</h3><p>Click here if you have issues claiming V2 rewards</p></div>
+    <div class="support-card"><h3>Farm Issues</h3><p>Click here for farm-related issues</p></div>
+    <div class="support-card"><h3>Transaction Error</h3><p>Click here if you are facing any transaction error</p></div>
+    <div class="support-card"><h3>Wallet Issues</h3><p>Click here if you have any wallet related issue</p></div>
+  </div>
 
 </body>
 </html>
