@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omega Global Rectification - Professional Investment Platform</title>
   <style>
-    :root {
-      --accent: #00ff9d;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    :root { --accent: #00ff9d; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: Arial, sans-serif;
       background: #0a0a0a;
@@ -23,7 +15,6 @@
       font-size: 1.05rem;
     }
 
-    /* NEW NAVIGATION BAR - Clean & Premium */
     nav {
       position: fixed;
       top: 0;
@@ -47,7 +38,7 @@
     .nav-links a {
       color: #ddd;
       text-decoration: none;
-      margin-left: 35px;
+      margin-left: 32px;
       font-size: 1.08rem;
       transition: color 0.3s;
     }
@@ -67,7 +58,6 @@
       cursor: pointer;
     }
 
-    /* HERO (your original code) */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
       height: 100vh;
@@ -127,10 +117,6 @@
       background: transparent;
       color: white;
       border: 2px solid white;
-    }
-
-    .btn:hover {
-      transform: translateY(-5px);
     }
 
     .section {
@@ -208,33 +194,32 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
   <nav>
     <div class="logo">Omega Global</div>
     <div class="nav-links">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="#plans">Plans</a>
-      <a href="#how">How It Works</a>
-      <a href="support.html">Support</a>
       <a href="#referral">Referral</a>
+      <a href="support.html">Support</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="dashboard.html">Dashboard</a>
     </div>
-    <button class="connect-btn" onclick="location.href='#'">Connect Wallet</button>
+    <button class="connect-btn" onclick="location.href='dashboard.html'">Connect Wallet</button>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div>
       <h1>Omega Global Rectification</h1>
       <p class="tagline">Revolutionizing rectification with blockchain technology for a better future.</p>
       <p class="min-deposit">Minimum Deposit: <strong>€500</strong></p>
       <div class="hero-buttons">
-        <a href="#" class="btn btn-green">Connect Wallet</a>
-        <a href="#" class="btn btn-white">Join Us Now</a>
+        <a href="dashboard.html" class="btn btn-green">Connect Wallet</a>
+        <a href="register.html" class="btn btn-white">Join Us Now</a>
       </div>
     </div>
   </section>
 
-  <!-- PLANS SECTION -->
   <section class="section" id="plans">
     <h2>Our Rectification Yield Tiers</h2>
     <p style="text-align:center; max-width:800px; margin:0 auto 60px; color:#ccc;">
@@ -249,47 +234,42 @@
         <div>+ up to 1% Performance Bonus</div>
         <div>€500 – €4,999</div>
         <div>4 Weeks • Up to \~12% Total Return</div>
-        <a href="#" class="btn btn-green">Invest Now</a>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
-
       <div class="plan-card">
         <h3>Premium Plan</h3>
         <div class="rate">3.5% Weekly</div>
         <div>+ up to 2% Performance Bonus</div>
         <div>€5,000 – €19,999</div>
         <div>6 Weeks • Up to \~24% Total Return</div>
-        <a href="#" class="btn btn-green">Invest Now</a>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
-
       <div class="plan-card">
         <h3>Elite Plan</h3>
         <div class="rate">4.8% Weekly</div>
         <div>+ up to 3% Performance Bonus</div>
         <div>€20,000 – €99,999</div>
         <div>8 Weeks • Up to \~45% Total Return</div>
-        <a href="#" class="btn btn-green">Invest Now</a>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
-
       <div class="plan-card">
         <h3>Omega Whale Plan</h3>
         <div class="rate">6.0% Weekly</div>
         <div>+ up to 5% Performance Bonus</div>
         <div>€100,000+</div>
         <div>12 Weeks • Up to \~85% Total Return</div>
-        <a href="#" class="btn btn-green">Invest Now</a>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
-
       <div class="plan-card">
         <h3>Fast Track Plan</h3>
         <div class="rate">4.5% Weekly</div>
         <div>7 Days • Quick Return</div>
         <div>Any Amount</div>
-        <a href="#" class="btn btn-green">Invest Now</a>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
     </div>
   </section>
 
-  <!-- REFERRAL BONUS -->
   <section class="section" id="referral" style="padding-top:0;">
     <div class="referral-box">
       <h3 style="color:var(--accent); font-size:2rem; margin-bottom:20px;">🎁 Earn 7% Referral Bonus</h3>
@@ -297,11 +277,10 @@
         Invite your friends and earn <strong>7% commission</strong> on their first investment.<br>
         Your friends also receive a bonus. Build passive income while growing the Omega community.
       </p>
-      <a href="#" class="btn btn-green" style="margin-top:30px;">Get Your Referral Link</a>
+      <a href="dashboard.html" class="btn btn-green" style="margin-top:30px;">Get Your Referral Link</a>
     </div>
   </section>
 
-  <!-- DISCLAIMER -->
   <div class="disclaimer">
     <strong>⚠️ Important Risk Disclosure:</strong> All investments carry risk of loss. Yields are estimates only and not guaranteed — they depend on market conditions and on-chain strategy performance. 
     Past performance is not indicative of future results. Invest only what you can afford to lose. Capital at risk.
@@ -313,4 +292,4 @@
   </footer>
 
 </body>
-  </html>
+    </html>
