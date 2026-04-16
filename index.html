@@ -30,7 +30,12 @@
       flex-wrap: wrap;
     }
 
-    .logo { font-size: 1.65rem; font-weight: 600; color: var(--accent); min-width: 160px; }
+    .logo { 
+      font-size: 1.65rem; 
+      font-weight: 600; 
+      color: var(--accent); 
+      min-width: 160px; 
+    }
 
     .ticker {
       display: flex;
@@ -60,6 +65,7 @@
       font-size: 1.05rem;
       border: none;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .hero {
@@ -74,9 +80,23 @@
       margin-top: 85px;
     }
 
-    .hero h1 { font-size: 3.6rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
-    .hero .tagline { font-size: 1.7rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.95; }
-    .min-deposit { font-size: 1.45rem; color: var(--accent); margin-bottom: 50px; }
+    .hero h1 { 
+      font-size: 3.6rem; 
+      font-weight: 700; 
+      margin-bottom: 20px; 
+      letter-spacing: -1px; 
+    }
+    .hero .tagline { 
+      font-size: 1.7rem; 
+      max-width: 800px; 
+      margin: 0 auto 30px; 
+      opacity: 0.95; 
+    }
+    .min-deposit { 
+      font-size: 1.45rem; 
+      color: var(--accent); 
+      margin-bottom: 50px; 
+    }
 
     .btn {
       padding: 18px 45px;
@@ -92,8 +112,16 @@
     .btn-green { background: var(--accent); color: #000; }
     .btn-white { background: transparent; color: white; border: 2px solid white; }
 
-    .section { padding: 110px 20px; max-width: 1100px; margin: 0 auto; }
-    .section h2 { font-size: 2.8rem; text-align: center; margin-bottom: 40px; }
+    .section { 
+      padding: 110px 20px; 
+      max-width: 1100px; 
+      margin: 0 auto; 
+    }
+    .section h2 { 
+      font-size: 2.8rem; 
+      text-align: center; 
+      margin-bottom: 40px; 
+    }
 
     .plans-grid {
       display: grid;
@@ -110,10 +138,22 @@
       transition: all 0.4s;
     }
 
-    .plan-card:hover { transform: translateY(-12px); border-color: var(--accent); }
+    .plan-card:hover { 
+      transform: translateY(-12px); 
+      border-color: var(--accent); 
+    }
 
-    .plan-card h3 { color: var(--accent); font-size: 1.65rem; margin-bottom: 12px; }
-    .plan-card .rate { font-size: 3.1rem; font-weight: 700; color: var(--accent); margin: 15px 0; }
+    .plan-card h3 { 
+      color: var(--accent); 
+      font-size: 1.65rem; 
+      margin-bottom: 12px; 
+    }
+    .plan-card .rate { 
+      font-size: 3.1rem; 
+      font-weight: 700; 
+      color: var(--accent); 
+      margin: 15px 0; 
+    }
 
     .referral-box {
       background: #1a1a1a;
@@ -138,7 +178,8 @@
     .trust-badges {
       text-align: center;
       margin: 60px 0;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      color: #aaa;
     }
 
     footer {
@@ -147,13 +188,19 @@
       background: #0a0a0a;
       border-top: 1px solid #222;
     }
-    footer a { color: #ccc; margin: 0 12px; text-decoration: none; }
+    footer a { 
+      color: #ccc; 
+      margin: 0 12px; 
+      text-decoration: none; 
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAVIGATION WITH TICKER -->
   <nav>
     <div class="logo">Omega Global</div>
+    
     <div class="ticker">
       <span>BTC $75,214 <span style="color:#0f0;">▲ 2.3%</span></span>
       <span>ETH $2,847 <span style="color:#0f0;">▲ 1.8%</span></span>
@@ -161,6 +208,7 @@
       <span>USDT $1.00</span>
       <span>LTC $68.42 <span style="color:#0f0;">▲ 1.4%</span></span>
     </div>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#plans">Plans</a>
@@ -170,9 +218,11 @@
       <a href="faq.html">FAQ</a>
       <a href="login.html">Login</a>
     </div>
+
     <button class="connect-btn" onclick="location.href='dashboard.html'">Connect Wallet</button>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1>Omega Global Rectification</h1>
@@ -185,6 +235,7 @@
     </div>
   </section>
 
+  <!-- PLANS -->
   <section class="section" id="plans">
     <h2>Our Rectification Yield Tiers</h2>
     <p style="text-align:center; max-width:800px; margin:0 auto 60px; color:#ccc;">
@@ -193,7 +244,6 @@
     </p>
 
     <div class="plans-grid">
-      <!-- Your 5 plan cards here - keep them as they are -->
       <div class="plan-card">
         <h3>Starter Plan</h3>
         <div class="rate">2.5% Weekly</div>
@@ -202,10 +252,41 @@
         <div>4 Weeks • Up to \~12% Total Return</div>
         <a href="dashboard.html" class="btn btn-green">Invest Now</a>
       </div>
-      <!-- Add the other 4 plans the same way as before -->
+      <div class="plan-card">
+        <h3>Premium Plan</h3>
+        <div class="rate">3.5% Weekly</div>
+        <div>+ up to 2% Performance Bonus</div>
+        <div>€5,000 – €19,999</div>
+        <div>6 Weeks • Up to \~24% Total Return</div>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
+      </div>
+      <div class="plan-card">
+        <h3>Elite Plan</h3>
+        <div class="rate">4.8% Weekly</div>
+        <div>+ up to 3% Performance Bonus</div>
+        <div>€20,000 – €99,999</div>
+        <div>8 Weeks • Up to \~45% Total Return</div>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
+      </div>
+      <div class="plan-card">
+        <h3>Omega Whale Plan</h3>
+        <div class="rate">6.0% Weekly</div>
+        <div>+ up to 5% Performance Bonus</div>
+        <div>€100,000+</div>
+        <div>12 Weeks • Up to \~85% Total Return</div>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
+      </div>
+      <div class="plan-card">
+        <h3>Fast Track Plan</h3>
+        <div class="rate">4.5% Weekly</div>
+        <div>7 Days • Quick Return</div>
+        <div>Any Amount</div>
+        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
+      </div>
     </div>
   </section>
 
+  <!-- REFERRAL -->
   <section class="section" id="referral" style="padding-top:0;">
     <div class="referral-box">
       <h3 style="color:var(--accent); font-size:2rem; margin-bottom:20px;">🎁 Earn 7% Referral Bonus</h3>
@@ -223,7 +304,8 @@
   </div>
 
   <div class="disclaimer">
-    <strong>⚠️ Important Risk Disclosure:</strong> All investments carry risk of loss. Yields are estimates only and not guaranteed. Invest only what you can afford to lose. Capital at risk.
+    <strong>⚠️ Important Risk Disclosure:</strong> All investments carry risk of loss. Yields are estimates only and not guaranteed — they depend on market conditions and on-chain strategy performance. 
+    Past performance is not indicative of future results. Invest only what you can afford to lose. Capital at risk.
   </div>
 
   <footer>
