@@ -15,7 +15,6 @@
       font-size: 1.05rem;
     }
 
-    /* NAVIGATION WITH TICKER */
     nav {
       position: fixed;
       top: 0;
@@ -23,12 +22,12 @@
       background: rgba(10,10,10,0.98);
       backdrop-filter: blur(12px);
       z-index: 1000;
-      padding: 12px 5%;
+      padding: 18px 5%;
       display: flex;
       align-items: center;
       border-bottom: 1px solid #222;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 15px;
     }
 
     .logo {
@@ -45,10 +44,6 @@
       overflow: hidden;
       white-space: nowrap;
       flex: 1;
-    }
-
-    .ticker span {
-      display: inline-block;
     }
 
     .nav-links a {
@@ -75,7 +70,6 @@
       white-space: nowrap;
     }
 
-    /* Rest of your original design */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
       height: 100vh;
@@ -204,15 +198,21 @@
 
     footer {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 80px 20px 50px;
       background: #0a0a0a;
       border-top: 1px solid #222;
+    }
+
+    footer a {
+      color: #ccc;
+      margin: 0 12px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION WITH LIVE TICKER -->
+  <!-- NAVIGATION WITH TICKER -->
   <nav>
     <div class="logo">Omega Global</div>
     
@@ -222,14 +222,13 @@
       <span>XRP $0.68 <span style="color:#ff5555;">▼ 0.9%</span></span>
       <span>USDT $1.00</span>
       <span>LTC $68.42 <span style="color:#0f0;">▲ 1.4%</span></span>
-      <span>ADA $0.31 <span style="color:#0f0;">▲ 3.1%</span></span>
-      <span>BNB $578 <span style="color:#ff5555;">▼ 0.4%</span></span>
     </div>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#plans">Plans</a>
       <a href="#referral">Referral</a>
+      <a href="about.html">About Us</a>
       <a href="support.html">Support</a>
       <a href="login.html">Login</a>
       <a href="register.html">Register</a>
@@ -297,32 +296,4 @@
         <div class="rate">4.5% Weekly</div>
         <div>7 Days • Quick Return</div>
         <div>Any Amount</div>
-        <a href="dashboard.html" class="btn btn-green">Invest Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- REFERRAL -->
-  <section class="section" id="referral" style="padding-top:0;">
-    <div class="referral-box">
-      <h3 style="color:var(--accent); font-size:2rem; margin-bottom:20px;">🎁 Earn 7% Referral Bonus</h3>
-      <p style="font-size:1.15rem; max-width:700px; margin:0 auto;">
-        Invite your friends and earn <strong>7% commission</strong> on their first investment.<br>
-        Your friends also receive a bonus. Build passive income while growing the Omega community.
-      </p>
-      <a href="dashboard.html" class="btn btn-green" style="margin-top:30px;">Get Your Referral Link</a>
-    </div>
-  </section>
-
-  <div class="disclaimer">
-    <strong>⚠️ Important Risk Disclosure:</strong> All investments carry risk of loss. Yields are estimates only and not guaranteed — they depend on market conditions and on-chain strategy performance. 
-    Past performance is not indicative of future results. Invest only what you can afford to lose. Capital at risk.
-  </div>
-
-  <footer>
-    <p>&copy; 2024 Omega Global Rectification. All Rights Reserved.</p>
-    <p style="margin-top:15px; font-size:0.95rem;">Secure • Transparent • Blockchain Powered</p>
-  </footer>
-
-</body>
-                       </html>
+        <a href
