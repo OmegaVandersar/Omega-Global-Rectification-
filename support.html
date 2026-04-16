@@ -3,32 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Center - Omega Global</title>
+  <title>Support Center - Omega Global Rectification</title>
   <style>
     :root { --accent: #00ff9d; }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:Arial,sans-serif; background:#0a0a0a; color:#fff; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.8;
+    }
     nav {
-      position:fixed; top:0; width:100%; background:rgba(10,10,10,0.98);
-      padding:18px 5%; display:flex; justify-content:space-between; align-items:center;
-      border-bottom:1px solid #222;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
     }
-    .logo { font-size:1.65rem; font-weight:600; color:var(--accent); }
-    .hero { 
-      background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('https://picsum.photos/id/1015/2000/1200') center/cover;
-      height:45vh; margin-top:80px; display:flex; align-items:center; justify-content:center;
-      text-align:center;
+    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
+      height: 45vh;
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
+
     .support-grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:25px; max-width:1280px; margin:80px auto; padding:0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      max-width: 1280px;
+      margin: 80px auto;
+      padding: 0 20px;
     }
+
     .support-card {
-      background:#1a1a1a; border:1px solid #333; border-radius:20px;
-      padding:35px 25px; text-align:center; transition:all .4s;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+      cursor: pointer;
     }
-    .support-card:hover { border-color:var(--accent); transform:translateY(-8px); }
-    .support-card h3 { color:var(--accent); margin:15px 0 10px; }
+
+    .support-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,255,157,0.15);
+    }
+
+    .support-card h3 {
+      color: var(--accent);
+      font-size: 1.55rem;
+      margin: 18px 0 12px;
+    }
   </style>
 </head>
 <body>
@@ -39,17 +78,20 @@
 
   <div class="hero">
     <div>
-      <h1 style="font-size:3.2rem;">Support Center</h1>
+      <h1 style="font-size:3.3rem;">Support Center</h1>
+      <p style="font-size:1.4rem; margin-top:15px;">Fast help for every issue</p>
     </div>
   </div>
 
   <div class="support-grid">
-    <div class="support-card" onclick="location.href='login.html'"><h3>Login Issues</h3><p>Click here if you have trouble logging in</p></div>
-    <div class="support-card" onclick="location.href='register.html'"><h3>Create Account</h3><p>Need help creating your account?</p></div>
-    <div class="support-card"><h3>Claim V2</h3><p>Click here if you have issues claiming V2 rewards</p></div>
-    <div class="support-card"><h3>Farm Issues</h3><p>Click here for farm-related issues</p></div>
-    <div class="support-card"><h3>Transaction Error</h3><p>Click here if you are facing any transaction error</p></div>
-    <div class="support-card"><h3>Wallet Issues</h3><p>Click here if you have any wallet related issue</p></div>
+    <div class="support-card" onclick="location.href='login.html'"><h3>Login Issues</h3><p>Trouble signing in to your account</p></div>
+    <div class="support-card" onclick="location.href='register.html'"><h3>Create Account</h3><p>Help with registration process</p></div>
+    <div class="support-card"><h3>Claim V2</h3><p>Issues claiming V2 rewards</p></div>
+    <div class="support-card"><h3>Farm Issues</h3><p>Farm and staking related problems</p></div>
+    <div class="support-card"><h3>Transaction Error</h3><p>Failed or stuck transactions</p></div>
+    <div class="support-card"><h3>Wallet Issues</h3><p>Wallet connection and balance problems</p></div>
+    <div class="support-card"><h3>NFT & Whitelist</h3><p>NFT minting and whitelist support</p></div>
+    <div class="support-card"><h3>Bridge Token</h3><p>Cross-chain transfer issues</p></div>
   </div>
 
 </body>
