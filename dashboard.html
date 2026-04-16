@@ -13,61 +13,101 @@
       color: #ffffff;
       line-height: 1.7;
     }
+
     nav {
-      position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.98);
-      backdrop-filter: blur(12px); z-index: 1000; padding: 18px 5%;
-      display: flex; justify-content: space-between; align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 1px solid #222;
     }
-    .logo { font-size: 1.65rem; font-weight: 600; color: var(--accent); }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
 
     .dashboard-container {
       margin-top: 90px;
-      padding: 30px;
-      max-width: 1200px;
+      padding: 40px 5%;
+      max-width: 1280px;
       margin-left: auto;
       margin-right: auto;
     }
 
     .balance-card {
-      background: #1a1a1a;
+      background: linear-gradient(135deg, #1a1a1a, #111);
       border: 2px solid var(--accent);
-      border-radius: 20px;
-      padding: 40px;
+      border-radius: 24px;
+      padding: 50px 40px;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      box-shadow: 0 20px 40px rgba(0, 255, 157, 0.08);
     }
 
     .balance {
-      font-size: 3.8rem;
+      font-size: 4.2rem;
       font-weight: 700;
       color: var(--accent);
       margin: 15px 0;
+      letter-spacing: -2px;
+    }
+
+    .gain {
+      color: #0f0;
+      font-size: 1.45rem;
+      margin-top: 10px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
     }
 
     .card {
       background: #1a1a1a;
       border: 1px solid #333;
-      border-radius: 18px;
-      padding: 30px;
-      transition: all 0.4s;
+      border-radius: 20px;
+      padding: 35px;
+      transition: all 0.4s ease;
     }
 
     .card:hover {
       border-color: var(--accent);
-      transform: translateY(-8px);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 255, 157, 0.12);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
     }
 
     .btn {
-      width: 100%; padding: 16px; background: var(--accent); color: #000;
-      border: none; border-radius: 50px; font-weight: 700; font-size: 1.15rem;
-      margin-top: 20px; cursor: pointer;
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
     }
   </style>
 </head>
@@ -75,42 +115,48 @@
 
   <nav>
     <div class="logo">Omega Global</div>
-    <div style="color:var(--accent); font-weight:600;">Dashboard</div>
+    <div style="color:var(--accent); font-weight:600; font-size:1.2rem;">Dashboard</div>
   </nav>
 
   <div class="dashboard-container">
+    <!-- Total Balance -->
     <div class="balance-card">
-      <p style="font-size:1.3rem; opacity:0.8;">Total Balance</p>
+      <p style="font-size:1.35rem; opacity:0.85;">Total Balance</p>
       <div class="balance">€48,672.34</div>
-      <p style="color:#0f0; font-size:1.4rem;">+€2,847 this week (+6.2%)</p>
+      <div class="gain">+€2,847 this week (+6.2%)</div>
     </div>
 
     <div class="grid">
+      <!-- Active Plan -->
       <div class="card">
-        <h3 style="color:var(--accent);">Active Plan</h3>
-        <p style="font-size:2.2rem; margin:20px 0;">Premium Plan</p>
-        <p>3.5% Weekly • €12,450 invested</p>
-        <button class="btn">Withdraw Earnings</button>
+        <h3>Active Plan</h3>
+        <p style="font-size:2.1rem; margin:20px 0 8px;">Premium Plan</p>
+        <p style="color:#ccc;">3.5% Weekly • €12,450 invested</p>
+        <button class="btn" onclick="alert('Earnings withdrawn (Demo)')">Withdraw Earnings</button>
       </div>
 
+      <!-- Next Payout -->
       <div class="card">
-        <h3 style="color:var(--accent);">Next Payout</h3>
-        <p style="font-size:2.2rem; margin:20px 0;">3 days</p>
-        <p>Estimated: €436.75</p>
-        <button class="btn">View Transaction History</button>
+        <h3>Next Payout</h3>
+        <p style="font-size:2.1rem; margin:20px 0 8px;">3 Days</p>
+        <p style="color:#ccc;">Estimated: €436.75</p>
+        <button class="btn" onclick="alert('Showing transaction history (Demo)')">View History</button>
       </div>
 
+      <!-- Referral Earnings -->
       <div class="card">
-        <h3 style="color:var(--accent);">Referral Earnings</h3>
-        <p style="font-size:2.2rem; margin:20px 0;">€1,284</p>
-        <p>From 7 referrals • 7% commission</p>
-        <button class="btn">Invite More Friends</button>
+        <h3>Referral Earnings</h3>
+        <p style="font-size:2.1rem; margin:20px 0 8px;">€1,284</p>
+        <p style="color:#ccc;">From 7 referrals • 7% commission</p>
+        <button class="btn" onclick="location.href='index.html#referral'">Invite More Friends</button>
       </div>
     </div>
 
-    <div style="text-align:center; margin-top:60px; color:#888;">
+    <div style="text-align:center; margin-top:70px; color:#777;">
       <p>Connected Wallet: 0x71C4...a3F9</p>
-      <p style="margin-top:30px;">Need help? <a href="support.html" style="color:var(--accent);">Go to Support Center</a></p>
+      <p style="margin-top:30px;">
+        Need help? <a href="support.html" style="color:var(--accent);">Go to Support Center</a>
+      </p>
     </div>
   </div>
 
