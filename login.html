@@ -14,45 +14,91 @@
       line-height: 1.8;
     }
     nav {
-      position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.98);
-      backdrop-filter: blur(12px); z-index: 1000; padding: 18px 5%;
-      display: flex; justify-content: space-between; align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 1px solid #222;
     }
-    .logo { font-size: 1.65rem; font-weight: 600; color: var(--accent); }
-    .form-container {
-      max-width: 420px; margin: 120px auto; padding: 40px 30px;
-      background: #1a1a1a; border-radius: 20px; border: 1px solid #333;
+    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
+
+    .login-container {
+      max-width: 420px;
+      margin: 140px auto;
+      padding: 50px 35px;
+      background: #1a1a1a;
+      border-radius: 24px;
+      border: 1px solid #333;
+      text-align: center;
     }
+
     input {
-      width: 100%; padding: 15px; margin: 12px 0;
-      background: #111; border: 1px solid #444; border-radius: 8px;
-      color: white; font-size: 1.1rem;
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1rem;
     }
+
     .btn {
-      width: 100%; padding: 16px; background: var(--accent); color: #000;
-      border: none; border-radius: 50px; font-weight: 700; font-size: 1.2rem;
-      margin-top: 20px; cursor: pointer;
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      cursor: pointer;
     }
-    .btn:hover { transform: scale(1.03); }
+
+    .btn:hover {
+      transform: scale(1.03);
+    }
   </style>
 </head>
 <body>
 
   <nav>
     <div class="logo">Omega Global</div>
-    <div style="color:#ddd;">Already have an account? <a href="login.html" style="color:var(--accent);">Login</a></div>
   </nav>
 
-  <div class="form-container">
-    <h2 style="text-align:center; margin-bottom:30px; color:var(--accent);">Login to Omega Global</h2>
-    <input type="text" placeholder="Email or Username" required>
-    <input type="password" placeholder="Password" required>
-    <button class="btn" onclick="alert('Login successful (demo)')">Login</button>
-    <p style="text-align:center; margin-top:20px;">
-      <a href="register.html" style="color:var(--accent);">Don't have an account? Register here</a>
+  <div class="login-container">
+    <h2 style="margin-bottom:30px; color:var(--accent);">Secure Login</h2>
+    
+    <input type="text" id="username" placeholder="Email or Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    
+    <button class="btn" onclick="login()">Login</button>
+    
+    <p style="margin-top:25px; color:#aaa;">
+      Don't have an account? <a href="register.html" style="color:var(--accent);">Register here</a>
     </p>
   </div>
 
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      if (username) {
+        alert("✅ Login Successful\n\nTwo-Factor Authentication (2FA) code has been sent to your email.\n\n(Enter any 6-digit code for demo)");
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 800);
+      } else {
+        alert("Please enter your credentials");
+      }
+    }
+  </script>
+
 </body>
-    </html>
+</html>
