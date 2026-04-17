@@ -11,8 +11,9 @@
       font-family: Arial, sans-serif;
       background: #0a0a0a;
       color: #ffffff;
-      line-height: 1.8;
+      line-height: 1.7;
     }
+
     nav {
       position: fixed;
       top: 0;
@@ -22,36 +23,44 @@
       z-index: 1000;
       padding: 18px 5%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #222;
     }
+
     .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
 
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
-      height: 45vh;
-      margin-top: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .support-container {
+      margin-top: 90px;
+      padding: 40px 5%;
+      max-width: 1100px;
+      margin: 90px auto 0;
+    }
+
+    h1 {
       text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.3rem;
+      opacity: 0.85;
+      margin-bottom: 60px;
     }
 
     .support-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 28px;
-      max-width: 1280px;
-      margin: 80px auto;
-      padding: 0 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
 
     .support-card {
       background: #1a1a1a;
       border: 1px solid #333;
       border-radius: 20px;
-      padding: 40px 30px;
+      padding: 35px 30px;
       text-align: center;
       transition: all 0.4s ease;
       cursor: pointer;
@@ -59,13 +68,30 @@
 
     .support-card:hover {
       border-color: var(--accent);
-      transform: translateY(-10px);
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(0, 255, 157, 0.15);
     }
 
     .support-card h3 {
       color: var(--accent);
-      font-size: 1.55rem;
-      margin: 18px 0 12px;
+      font-size: 1.65rem;
+      margin-bottom: 15px;
+    }
+
+    .support-card p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      margin-top: 50px;
+      padding: 14px 40px;
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -75,28 +101,90 @@
     <div class="logo">Omega Global</div>
   </nav>
 
-  <div class="hero">
-    <div>
-      <h1 style="font-size:3.3rem;">Support Center</h1>
-      <p style="font-size:1.4rem; margin-top:15px;">Find help for any issue</p>
+  <div class="support-container">
+    <h1>Support Center</h1>
+    <p class="subtitle">Select the issue you need help with. Our team responds within 24 hours.</p>
+
+    <div class="support-grid">
+      <div class="support-card" onclick="handleSupport('claim')">
+        <h3>Claim V2</h3>
+        <p>Click here if you have issues claiming V2 rewards or reflections.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('farm')">
+        <h3>Farm Issues</h3>
+        <p>Click here for farm-related issues, staking problems, or rewards not appearing.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('whitelist')">
+        <h3>Whitelist Issues</h3>
+        <p>Click here for help whitelisting wallets for NFTs or tokens.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('login')">
+        <h3>Login Issues</h3>
+        <p>Having trouble logging in? Click here.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('transaction')">
+        <h3>Transaction Delay / Error</h3>
+        <p>Click here if your transaction is delayed or showing an error.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('wallet')">
+        <h3>Wallet Connect Issues</h3>
+        <p>Problems connecting wallet or balance not showing.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('kyc')">
+        <h3>KYC / Verification</h3>
+        <p>Questions about KYC status or document upload.</p>
+      </div>
+
+      <div class="support-card" onclick="handleSupport('general')">
+        <h3>Other Issues</h3>
+        <p>Anything else? Click here to send us a message.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:60px;">
+      <button class="back-btn" onclick="location.href='index.html'">← Back to Homepage</button>
     </div>
   </div>
 
-  <div class="support-grid">
-    <div class="support-card"><h3>Claim V2</h3><p>Click here if you have issues claiming V2.</p></div>
-    <div class="support-card"><h3>Farm Issues</h3><p>Click here for farm-related issues.</p></div>
-    <div class="support-card"><h3>Whitelist Issues</h3><p>Click here for help whitelisting wallets for NFTs.</p></div>
-    <div class="support-card"><h3>NFTs Issues</h3><p>Click here to mint/transfer NFTs or receive support.</p></div>
-    <div class="support-card"><h3>Trading Wallet Issues</h3><p>Click here if you have any wallet issue.</p></div>
-    <div class="support-card"><h3>Access Denied</h3><p>Unable to buy tokens — account must be trusted.</p></div>
-    <div class="support-card"><h3>Login Issues</h3><p>Click here if you have trouble logging in.</p></div>
-    <div class="support-card"><h3>Transaction Error</h3><p>Click here if you face any transaction error.</p></div>
-    <div class="support-card"><h3>Bridge Token</h3><p>Click here for cross-chain transfer issues.</p></div>
-    <div class="support-card"><h3>Liquidity</h3><p>Click here for liquidity related issues.</p></div>
-    <div class="support-card"><h3>Swap/Exchange</h3><p>Click here for swap or exchange issues.</p></div>
-    <div class="support-card"><h3>Transaction Delay</h3><p>Click here for stuck/delayed transactions.</p></div>
-    <div class="support-card"><h3>Staking Issues</h3><p>Click here for staking related issues.</p></div>
-  </div>
+  <script>
+    function handleSupport(type) {
+      let message = "";
+
+      switch(type) {
+        case "claim":
+          message = "✅ Claim V2 Issue\n\nOur team has been notified. Please check your dashboard in 24-48 hours. If the issue persists, reply with your wallet address.";
+          break;
+        case "farm":
+          message = "🌾 Farm Issues\n\nCommon fixes: Refresh page, reconnect wallet, or wait for the next payout cycle. Our support team will assist you shortly.";
+          break;
+        case "whitelist":
+          message = "🔗 Whitelist Issues\n\nTo whitelist your wallet for NFTs, go to your dashboard → KYC section. Need help? Provide your wallet address below.";
+          break;
+        case "login":
+          message = "🔑 Login Issues\n\nTry clearing your browser cache or use the 'Forgot Password' option. If still stuck, we will help you reset access.";
+          break;
+        case "transaction":
+          message = "⏳ Transaction Delay\n\nHigh network fees or congestion can cause delays. Please wait 5-30 minutes and refresh. Still not resolved? Contact us with transaction hash.";
+          break;
+        case "wallet":
+          message = "🔌 Wallet Connect Issues\n\nMake sure you are using a compatible wallet (MetaMask, Trust Wallet, etc.). Try reconnecting or switching networks.";
+          break;
+        case "kyc":
+          message = "📄 KYC / Verification\n\nVerification usually takes 24-48 hours. Check your email for updates. Need faster help? Reply with your submitted documents reference.";
+          break;
+        default:
+          message = "📩 Other Issues\n\nThank you for reaching out. Our support team will reply to you within 24 hours. Please describe your issue in detail.";
+      }
+
+      alert(message + "\n\nIf you need immediate help, email: support@omegaglobalrectification.com");
+    }
+  </script>
 
 </body>
 </html>
