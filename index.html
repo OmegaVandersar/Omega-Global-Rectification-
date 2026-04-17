@@ -26,11 +26,10 @@
       display: flex;
       align-items: center;
       border-bottom: 1px solid #222;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
-    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); min-width: 170px; }
+    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
 
     .ticker {
       display: flex;
@@ -41,11 +40,15 @@
       flex: 1;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 1.08rem;
+    }
+
     .nav-links a {
       color: #ddd;
       text-decoration: none;
-      margin-left: 32px;
-      font-size: 1.08rem;
       transition: color 0.3s;
     }
 
@@ -61,6 +64,36 @@
       border: none;
       cursor: pointer;
     }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #0a0a0a;
+      padding: 30px 5%;
+      flex-direction: column;
+      gap: 25px;
+      font-size: 1.25rem;
+      border-top: 1px solid #222;
+    }
+
+    .mobile-menu.active { display: flex; }
 
     .hero {
       background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
@@ -176,19 +209,64 @@
       max-width: 920px;
     }
 
+    /* Contact Form */
+    .contact-section {
+      background: #111;
+      padding: 100px 20px;
+    }
+
+    .contact-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 50px;
+      border-radius: 24px;
+      border: 1px solid #333;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 20px;
+      background: #0a0a0a;
+      border: 1px solid #444;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 18px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
     footer {
       text-align: center;
-      padding: 90px 20px 60px;
+      padding: 80px 20px 60px;
       background: #0a0a0a;
       border-top: 1px solid #222;
     }
     footer a { color: #ccc; margin: 0 14px; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
   </style>
 </head>
 <body>
 
   <nav>
     <div class="logo">Omega Global</div>
+    
     <div class="ticker">
       <span>BTC $75,214 <span style="color:#0f0;">▲ 2.3%</span></span>
       <span>ETH $2,847 <span style="color:#0f0;">▲ 1.8%</span></span>
@@ -196,6 +274,7 @@
       <span>USDT $1.00</span>
       <span>LTC $68.42 <span style="color:#0f0;">▲ 1.4%</span></span>
     </div>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#plans">Plans</a>
@@ -205,8 +284,25 @@
       <a href="faq.html">FAQ</a>
       <a href="login.html">Login</a>
     </div>
+
     <button class="connect-btn" onclick="location.href='dashboard.html'">Connect Wallet</button>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="#referral">Referral</a>
+    <a href="about.html">About Us</a>
+    <a href="support.html">Support</a>
+    <a href="faq.html">FAQ</a>
+    <a href="login.html">Login</a>
+  </div>
 
   <section class="hero">
     <div>
@@ -281,7 +377,6 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="section testimonials" style="background:#111;">
     <h2>What Our Members Say</h2>
     <div class="testimonial-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px; max-width:1100px; margin:0 auto;">
@@ -297,6 +392,17 @@
         <p>"Referral bonus is real. I've earned extra income just by sharing."</p>
         <p style="margin-top:20px; color:var(--accent);">- David O., Germany</p>
       </div>
+    </div>
+  </section>
+
+  <!-- New Contact Form Section -->
+  <section class="contact-section">
+    <h2 style="text-align:center; margin-bottom:50px;">Have Questions? Contact Us</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Full Name" required>
+      <input type="email" placeholder="Your Email Address" required>
+      <textarea rows="5" placeholder="Your Message or Question" required></textarea>
+      <button onclick="sendMessage()">Send Message</button>
     </div>
   </section>
 
@@ -320,5 +426,16 @@
     </p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    function sendMessage() {
+      alert("✅ Thank you! Your message has been received. Our team will reply within 24 hours.");
+    }
+  </script>
+
 </body>
-                              </html>
+  </html>
