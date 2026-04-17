@@ -30,21 +30,9 @@
       flex-wrap: wrap;
     }
 
-    .logo { 
-      font-size: 1.65rem; 
-      font-weight: 600; 
-      color: var(--accent); 
-      min-width: 160px; 
-    }
+    .logo { font-size: 1.65rem; font-weight: 600; color: var(--accent); min-width: 160px; }
 
-    .ticker {
-      display: flex;
-      gap: 28px;
-      font-size: 1.02rem;
-      overflow: hidden;
-      white-space: nowrap;
-      flex: 1;
-    }
+    .ticker { display: flex; gap: 28px; font-size: 1.02rem; overflow: hidden; white-space: nowrap; flex: 1; }
 
     .nav-links a {
       color: #ddd;
@@ -59,13 +47,12 @@
     .connect-btn {
       background: var(--accent);
       color: #000;
-      padding: 12px 32px;
+      padding: 12px 28px;
       border-radius: 50px;
       font-weight: 700;
       font-size: 1.05rem;
       border: none;
       cursor: pointer;
-      white-space: nowrap;
     }
 
     .hero {
@@ -80,23 +67,9 @@
       margin-top: 85px;
     }
 
-    .hero h1 { 
-      font-size: 3.6rem; 
-      font-weight: 700; 
-      margin-bottom: 20px; 
-      letter-spacing: -1px; 
-    }
-    .hero .tagline { 
-      font-size: 1.7rem; 
-      max-width: 800px; 
-      margin: 0 auto 30px; 
-      opacity: 0.95; 
-    }
-    .min-deposit { 
-      font-size: 1.45rem; 
-      color: var(--accent); 
-      margin-bottom: 50px; 
-    }
+    .hero h1 { font-size: 3.6rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
+    .hero .tagline { font-size: 1.7rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.95; }
+    .min-deposit { font-size: 1.45rem; color: var(--accent); margin-bottom: 50px; }
 
     .btn {
       padding: 18px 45px;
@@ -145,6 +118,26 @@
       max-width: 800px;
     }
 
+    .testimonials {
+      background: #111;
+      padding: 80px 20px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 35px;
+    }
+
     .disclaimer {
       text-align: center;
       margin: 80px auto;
@@ -153,13 +146,6 @@
       border: 1px solid #ff5555;
       border-radius: 12px;
       max-width: 900px;
-    }
-
-    .trust-badges {
-      text-align: center;
-      margin: 60px 0;
-      font-size: 1.15rem;
-      color: #aaa;
     }
 
     footer {
@@ -175,7 +161,6 @@
 
   <nav>
     <div class="logo">Omega Global</div>
-    
     <div class="ticker">
       <span>BTC $75,214 <span style="color:#0f0;">▲ 2.3%</span></span>
       <span>ETH $2,847 <span style="color:#0f0;">▲ 1.8%</span></span>
@@ -183,7 +168,6 @@
       <span>USDT $1.00</span>
       <span>LTC $68.42 <span style="color:#0f0;">▲ 1.4%</span></span>
     </div>
-
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="#plans">Plans</a>
@@ -193,8 +177,7 @@
       <a href="faq.html">FAQ</a>
       <a href="login.html">Login</a>
     </div>
-
-    <button class="connect-btn" onclick="connectWallet()">Connect Wallet</button>
+    <button class="connect-btn" onclick="location.href='dashboard.html'">Connect Wallet</button>
   </nav>
 
   <section class="hero">
@@ -203,7 +186,7 @@
       <p class="tagline">Revolutionizing rectification with blockchain technology for a better future.</p>
       <p class="min-deposit">Minimum Deposit: <strong>€500</strong></p>
       <div>
-        <button class="btn btn-green" onclick="connectWallet()">Connect Wallet</button>
+        <button class="btn btn-green" onclick="location.href='dashboard.html'">Connect Wallet</button>
         <a href="register.html" class="btn btn-white">Join Us Now</a>
       </div>
     </div>
@@ -270,6 +253,25 @@
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section class="section testimonials" style="background:#111;">
+    <h2>What Our Members Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Best investment platform I've used. Weekly payouts are consistent and on time."</p>
+        <p style="margin-top:20px; color:var(--accent);">- Michael T., United Kingdom</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"The transparency and blockchain verification give me full confidence."</p>
+        <p style="margin-top:20px; color:var(--accent);">- Aisha K., Nigeria</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Referral bonus is real. I've earned extra income just by sharing."</p>
+        <p style="margin-top:20px; color:var(--accent);">- David O., Germany</p>
+      </div>
+    </div>
+  </section>
+
   <div class="trust-badges">
     🔒 SSL Secured • 🔗 Blockchain Verified • 🛡️ Audited Smart Contracts • 💰 Instant Withdrawals
   </div>
@@ -290,12 +292,5 @@
     </p>
   </footer>
 
-  <script>
-    function connectWallet() {
-      const address = "0x71C4f8b9a3F2e7dC1a5b2e9f0c8d7e6f5a4b3c2d";
-      alert("Wallet Connected Successfully\n\nAddress: " + address + "\n\nYou can now invest.");
-    }
-  </script>
-
 </body>
-        </html>
+  </html>
