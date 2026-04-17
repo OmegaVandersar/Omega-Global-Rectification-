@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYC Verification - Omega Global Rectification</title>
+  <style>
+    :root { --accent: #00ff9d; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+    .logo { font-size: 1.75rem; font-weight: 600; color: var(--accent); }
+
+    .kyc-container {
+      max-width: 520px;
+      margin: 140px auto;
+      padding: 50px 40px;
+      background: #1a1a1a;
+      border-radius: 24px;
+      border: 1px solid #333;
+      text-align: center;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin: 25px 0;
+      padding: 15px;
+      background: #1a3a1a;
+      border-radius: 12px;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Omega Global</div>
+  </nav>
+
+  <div class="kyc-container">
+    <h2 style="margin-bottom:30px; color:var(--accent);">KYC Verification</h2>
+    <p style="margin-bottom:30px; color:#ccc;">Complete verification to unlock full investment features and withdrawals.</p>
+
+    <input type="text" placeholder="Full Legal Name" required>
+    <input type="text" placeholder="Date of Birth (DD/MM/YYYY)" required>
+    <input type="text" placeholder="Country of Residence" required>
+    <select>
+      <option value="">Select ID Type</option>
+      <option>International Passport</option>
+      <option>National ID Card</option>
+      <option>Driver's License</option>
+    </select>
+    <input type="text" placeholder="ID Number" required>
+
+    <div class="status">
+      ✅ Identity verification usually takes 24-48 hours
+    </div>
+
+    <button class="btn" onclick="submitKYC()">Submit KYC Documents</button>
+    
+    <p style="margin-top:25px; color:#aaa;">
+      Already verified? <a href="dashboard.html" style="color:var(--accent);">Go to Dashboard</a>
+    </p>
+  </div>
+
+  <script>
+    function submitKYC() {
+      alert("✅ KYC Documents Submitted Successfully!\n\nYour verification is under review. You will be notified via email within 24-48 hours.");
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
