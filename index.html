@@ -3,299 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Omega Global - Secure digital investment platform with transparent returns and modern strategies.">
-    <title>Omega Global • Invest With Confidence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Omega Global Rectification • Precision Wealth in Digital Assets</title>
     <style>
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                        url('https://images.unsplash.com/photo-1559526324-593bc073d938');
-            background-size: cover;
-            background-position: center;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --navy: #0A1428;
+            --gold: #D4AF37;
+            --emerald: #00C4A0;
+            --charcoal: #1E2937;
         }
-        .nav-link { transition: all 0.3s; }
-        .nav-link:hover { color: #d97706; }
-        .card-hover { transition: all 0.3s; }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--navy);
+            color: #E2E8F0;
+            line-height: 1.7;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,20,40,0.98);
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+        .logo {
+            font-size: 2.3rem;
+            color: var(--gold);
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .nav-links a {
+            color: #E2E8F0;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        header {
+            background: linear-gradient(rgba(10,20,40,0.92), rgba(10,20,40,0.92)), url('https://i.imgur.com/MEeRFvZ.jpeg') center/cover no-repeat fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 70px;
+        }
+        .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10,20,40,0.7), rgba(10,20,40,0.9)); }
+        .content { position: relative; z-index: 2; max-width: 920px; padding: 0 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.3rem; margin-bottom: 20px; color: white; }
+        .tagline { font-size: 1.4rem; margin-bottom: 45px; opacity: 0.95; }
+        .cta {
+            background: var(--gold);
+            color: #0A1428;
+            padding: 18px 50px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .cta:hover { background: white; transform: translateY(-4px); }
+
+        section { padding: 110px 5%; max-width: 1280px; margin: 0 auto; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 70px;
+            color: white;
+        }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        .plan-card {
+            background: var(--charcoal);
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .plan-card.popular { border: 3px solid var(--gold); }
+        .plan-card:hover { transform: translateY(-15px); }
+        .plan-yield { font-size: 3.1rem; color: var(--emerald); margin: 12px 0; font-weight: 600; }
+        .withdrawal-card {
+            background: var(--charcoal);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 5px solid var(--emerald);
+        }
+        .faq-item {
+            background: var(--charcoal);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #05080f;
+            padding: 90px 5% 50px;
+            text-align: center;
+            font-size: 0.93rem;
+            opacity: 0.9;
+        }
+        .footer-links a {
+            color: #E2E8F0;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-links a:hover { color: var(--gold); }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-<!-- NAVBAR -->
-<nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-amber-500 text-white flex items-center justify-center rounded-2xl font-bold text-2xl">Ω</div>
-            <h1 class="font-bold text-2xl tracking-tight">Omega Global</h1>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Ω Omega Global Rectification</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#plans">Plans</a>
+            <a href="#why">Why Us</a>
+            <a href="#withdrawals">Live Proof</a>
+            <a href="#faq">FAQ</a>
+            <a href="#" onclick="alert('Login coming soon – contact support for access')">Login</a>
+            <a href="#" onclick="alert('Register via omegaglobalsupport11@gmail.com')">Register</a>
         </div>
+    </nav>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex gap-8 text-sm font-medium">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#how" class="nav-link">How It Works</a>
-            <a href="#plans" class="nav-link">Plans</a>
+    <!-- HERO -->
+    <header>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Precision Wealth in Digital Assets</h1>
+            <p class="tagline">European discipline. On-chain transparency. Sustainable growth for global investors.</p>
+            <a href="#plans" class="cta">Explore Yield Tiers</a>
         </div>
+    </header>
 
-        <div class="flex items-center gap-4">
-            <a href="#" class="text-sm font-medium nav-link">Login</a>
-            <a href="#" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2.5 rounded-2xl font-semibold transition">Register</a>
-            
-            <!-- Mobile Hamburger -->
-            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
-                ☰
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4">
-        <a href="#home" class="block py-3 text-sm font-medium">Home</a>
-        <a href="#about" class="block py-3 text-sm font-medium">About</a>
-        <a href="#how" class="block py-3 text-sm font-medium">How It Works</a>
-        <a href="#plans" class="block py-3 text-sm font-medium">Plans</a>
-        <a href="#" class="block py-3 text-sm font-medium">Login</a>
-        <a href="#" class="block bg-amber-600 text-white text-center py-3 rounded-2xl mt-4">Register Now</a>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="hero h-screen flex items-center text-white">
-    <div class="text-center max-w-4xl mx-auto px-6">
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Digital Investment Platform<br>Built for Real Growth
-        </h1>
-        <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
-            Secure • Transparent • Powered by proven financial strategies
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#plans" class="bg-amber-600 hover:bg-amber-700 px-10 py-4 rounded-3xl text-lg font-semibold transition">Get Started Today</a>
-            <a href="#plans" class="border-2 border-white hover:bg-white hover:text-black px-10 py-4 rounded-3xl text-lg font-semibold transition">View Investment Plans</a>
-        </div>
-        <p class="text-xs mt-8 text-gray-400">✓ Regulated processes • ✓ 24/7 support • ✓ Zero hidden fees</p>
-    </div>
-</section>
-
-<!-- TRUST / WHY CHOOSE US -->
-<section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4">Why Smart Investors Choose Omega Global</h2>
-        <p class="text-gray-600 mb-12">Built on transparency, security, and results.</p>
-        
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center card-hover p-6 rounded-3xl bg-gray-50">
-                <div class="text-4xl mb-4">🔐</div>
-                <h3 class="font-semibold text-lg">Bank-Grade Security</h3>
-                <p class="text-sm text-gray-600 mt-2">256-bit encryption &amp; multi-factor authentication</p>
-            </div>
-            <div class="text-center card-hover p-6 rounded-3xl bg-gray-50">
-                <div class="text-4xl mb-4">📊</div>
-                <h3 class="font-semibold text-lg">Full Transparency</h3>
-                <p class="text-sm text-gray-600 mt-2">Real-time portfolio tracking and audit reports</p>
-            </div>
-            <div class="text-center card-hover p-6 rounded-3xl bg-gray-50">
-                <div class="text-4xl mb-4">⚡</div>
-                <h3 class="font-semibold text-lg">Instant Withdrawals</h3>
-                <p class="text-sm text-gray-600 mt-2">Funds available within 24 hours</p>
-            </div>
-            <div class="text-center card-hover p-6 rounded-3xl bg-gray-50">
-                <div class="text-4xl mb-4">🌍</div>
-                <h3 class="font-semibold text-lg">Global Access</h3>
-                <p class="text-sm text-gray-600 mt-2">Trade from anywhere, anytime</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-gray-100">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6">About Omega Global</h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-700">
-            We are a next-generation digital investment platform that combines cutting-edge technology with proven financial strategies. 
-            Our mission is simple: help everyday people grow their wealth securely and confidently.
-        </p>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">How It Works — In 4 Simple Steps</h2>
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="mx-auto w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-4">1</div>
-                <h4 class="font-semibold">Create Account</h4>
-                <p class="text-sm text-gray-600 mt-2">Takes less than 2 minutes</p>
-            </div>
-            <div class="text-center">
-                <div class="mx-auto w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-4">2</div>
-                <h4 class="font-semibold">Fund Your Wallet</h4>
-                <p class="text-sm text-gray-600 mt-2">Bank transfer, card, or crypto</p>
-            </div>
-            <div class="text-center">
-                <div class="mx-auto w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-4">3</div>
-                <h4 class="font-semibold">Choose a Plan</h4>
-                <p class="text-sm text-gray-600 mt-2">Starter, Premium or Elite</p>
-            </div>
-            <div class="text-center">
-                <div class="mx-auto w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-4">4</div>
-                <h4 class="font-semibold">Watch Your Money Grow</h4>
-                <p class="text-sm text-gray-600 mt-2">Earn weekly returns automatically</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- INVESTMENT PLANS -->
-<section id="plans" class="py-20 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4">Choose Your Growth Path</h2>
-        <p class="text-gray-400 mb-12">Flexible plans designed for every investor level</p>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Starter -->
-            <div class="bg-gray-800 p-8 rounded-3xl card-hover">
-                <h3 class="text-2xl font-semibold">Starter</h3>
-                <p class="text-5xl font-bold text-amber-400 mt-4">2%</p>
-                <p class="text-sm text-gray-400">Estimated weekly return</p>
-                <ul class="my-8 space-y-3 text-left text-sm">
-                    <li class="flex items-center gap-2">✅ Minimum: $100</li>
-                    <li class="flex items-center gap-2">✅ 7-day lock period</li>
-                    <li class="flex items-center gap-2">✅ Weekly payouts</li>
-                    <li class="flex items-center gap-2">✅ Basic support</li>
-                </ul>
-                <a href="#" class="block w-full bg-amber-600 hover:bg-amber-700 py-4 rounded-2xl font-semibold">Invest Now</a>
-            </div>
-
-            <!-- Premium (Most Popular) -->
-            <div class="bg-gray-800 p-8 rounded-3xl card-hover relative border-2 border-amber-500">
-                <div class="absolute -top-3 right-6 bg-amber-500 text-white text-xs px-4 py-1 rounded-full font-bold">MOST POPULAR</div>
-                <h3 class="text-2xl font-semibold">Premium</h3>
-                <p class="text-5xl font-bold text-amber-400 mt-4">3%</p>
-                <p class="text-sm text-gray-400">Estimated weekly return</p>
-                <ul class="my-8 space-y-3 text-left text-sm">
-                    <li class="flex items-center gap-2">✅ Minimum: $500</li>
-                    <li class="flex items-center gap-2">✅ 14-day lock period</li>
-                    <li class="flex items-center gap-2">✅ Priority support</li>
-                    <li class="flex items-center gap-2">✅ Advanced analytics</li>
-                </ul>
-                <a href="#" class="block w-full bg-amber-600 hover:bg-amber-700 py-4 rounded-2xl font-semibold">Invest Now</a>
-            </div>
-
-            <!-- Elite -->
-            <div class="bg-gray-800 p-8 rounded-3xl card-hover">
-                <h3 class="text-2xl font-semibold">Elite</h3>
-                <p class="text-5xl font-bold text-amber-400 mt-4">5%</p>
-                <p class="text-sm text-gray-400">Estimated weekly return</p>
-                <ul class="my-8 space-y-3 text-left text-sm">
-                    <li class="flex items-center gap-2">✅ Minimum: $2,000</li>
-                    <li class="flex items-center gap-2">✅ 30-day lock period</li>
-                    <li class="flex items-center gap-2">✅ VIP manager access</li>
-                    <li class="flex items-center gap-2">✅ Early withdrawal option</li>
-                </ul>
-                <a href="#" class="block w-full bg-amber-600 hover:bg-amber-700 py-4 rounded-2xl font-semibold">Join Elite</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">What Our Investors Say</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-8 rounded-3xl">
-                <p class="italic">"I started with $300 and I’m already seeing consistent weekly returns. The platform is so easy to use!"</p>
-                <div class="mt-8 flex items-center gap-3">
-                    <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                    <div>
-                        <p class="font-semibold">Sarah O.</p>
-                        <p class="text-xs text-gray-500">Lagos, Nigeria</p>
-                    </div>
+    <!-- ABOUT / LEADERSHIP -->
+    <section id="about" style="background:var(--charcoal);">
+        <h2 class="section-title">About Omega Global Rectification</h2>
+        <div style="max-width:1100px; margin:0 auto; text-align:center;">
+            <p style="font-size:1.15rem; margin-bottom:50px;">
+                Omega Global Rectification is a professional cryptocurrency investment platform founded on European precision, full transparency, and institutional security. 
+                We deliver structured yield opportunities in digital assets while maintaining verifiable on-chain records and rigorous risk management.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 70px;">
+                <div style="text-align:center;">
+                    <img src="https://i.imgur.com/MEeRFvZ.jpeg" alt="Dr. Klaus Heinrich von Richter" class="leader-img" style="width:100%; max-width:380px; border-radius:8px;">
+                    <h3 style="margin:25px 0 8px; color:var(--gold);">Dr. Klaus Heinrich von Richter</h3>
+                    <p><strong>Founder & Chief Investment Officer</strong></p>
+                    <p>Over 20 years in global finance and digital asset management. I lead with discipline, transparency, and a commitment to investor success.</p>
                 </div>
-            </div>
-            <div class="bg-gray-50 p-8 rounded-3xl">
-                <p class="italic">"The transparency is unmatched. I can track every single transaction in real-time. Best decision I made this year."</p>
-                <div class="mt-8 flex items-center gap-3">
-                    <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                    <div>
-                        <p class="font-semibold">Michael K.</p>
-                        <p class="text-xs text-gray-500">Abuja, Nigeria</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray-50 p-8 rounded-3xl">
-                <p class="italic">"Withdrew my first profit in under 48 hours. Professional team and lightning-fast support."</p>
-                <div class="mt-8 flex items-center gap-3">
-                    <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                    <div>
-                        <p class="font-semibold">Aisha B.</p>
-                        <p class="text-xs text-gray-500">Kano, Nigeria</p>
-                    </div>
+                <div style="text-align:center;">
+                    <img src="https://via.placeholder.com/380x450/1E2937/D4AF37?text=Manfred+Kessler" alt="Manfred Wolfgang Kessler" class="leader-img" style="width:100%; max-width:380px; border-radius:8px;">
+                    <h3 style="margin:25px 0 8px; color:var(--gold);">Manfred Wolfgang Kessler</h3>
+                    <p><strong>Executive Chairman & Co-Founder</strong></p>
+                    <p>Expert in portfolio construction and risk management. I ensure every operation meets the highest professional standards.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section class="py-20 bg-gray-100">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-        **Summary:**
-Is my money safe?
-            <p class="text-gray-600 mt-4">Yes. We use bank-level encryption and never share your funds with third parties.</p>
-        **Summary:**
-How often do I get paid?
-            <p class="text-gray-600 mt-4">Weekly returns are credited automatically every Monday.</p>
-        **Summary:**
-Can I withdraw anytime?
-            <p class="text-gray-600 mt-4">Yes, after the lock period of your chosen plan. Elite members have early withdrawal options.</p>
-    </div>
-</section>
+    <!-- WHY CHOOSE US -->
+    <section id="why">
+        <h2 class="section-title">Why Choose Omega Global Rectification</h2>
+        <div style="max-width:1000px; margin:0 auto; text-align:center; font-size:1.15rem;">
+            <p>We provide global financial assistance through secure, transparent cryptocurrency strategies. Our platform combines European precision with blockchain technology to offer sustainable weekly yields, full on-chain visibility, and professional support for qualified investors worldwide.</p>
+            <p style="margin-top:30px;">Investors from Europe, North America, the Middle East, and Africa choose us for mandatory KYC, 2FA security, verifiable withdrawals, and a clear focus on long-term value rather than hype.</p>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-400 py-16">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
-        <div>
-            <div class="flex items-center gap-2 text-white mb-4">
-                <div class="w-8 h-8 bg-amber-500 rounded-2xl flex items-center justify-center font-bold">Ω</div>
-                <span class="font-bold text-xl">Omega Global</span>
+    <!-- YIELD PLANS -->
+    <section id="plans" style="background:var(--charcoal);">
+        <h2 class="section-title">Our Rectification Yield Tiers</h2>
+        <div class="plan-grid">
+            <div class="plan-card">
+                <h3 style="color:var(--emerald);">Starter Plan</h3>
+                <div class="plan-yield">2.5%</div>
+                <h4>Weekly</h4>
+                <p>€500 – €4,999</p>
+                <p>+ up to 1% Performance Bonus</p>
+                <p>4 Weeks • Up to \~12% Total</p>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
             </div>
-            <p class="text-sm">Empowering financial freedom through smart investing.</p>
+            <div class="plan-card">
+                <h3 style="color:var(--emerald);">Fast Track Plan</h3>
+                <div class="plan-yield">4.5%</div>
+                <h4>Weekly</h4>
+                <p>7 Days • Any Amount</p>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+            </div>
+            <div class="plan-card popular">
+                <h3 style="color:var(--emerald);">Premium Plan</h3>
+                <div class="plan-yield">3.5%</div>
+                <h4>Weekly</h4>
+                <p>€5,000 – €19,999</p>
+                <p>+ up to 2% Performance Bonus</p>
+                <p>6 Weeks • Up to \~24% Total</p>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+            </div>
+            <div class="plan-card">
+                <h3 style="color:var(--emerald);">Elite Plan</h3>
+                <div class="plan-yield">4.8%</div>
+                <h4>Weekly</h4>
+                <p>€20,000 – €99,999</p>
+                <p>+ up to 3% Performance Bonus</p>
+                <p>8 Weeks • Up to \~45% Total</p>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+            </div>
+            <div class="plan-card">
+                <h3 style="color:var(--emerald);">Omega Whale Plan</h3>
+                <div class="plan-yield">6.0%</div>
+                <h4>Weekly</h4>
+                <p>€100,000+</p>
+                <p>+ up to 5% Performance Bonus</p>
+                <p>12 Weeks • Up to \~85% Total</p>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+            </div>
         </div>
-        <div>
-            <h4 class="font-semibold text-white mb-4">Company</h4>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">About Us</a>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">Careers</a>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">Contact</a>
-        </div>
-        <div>
-            <h4 class="font-semibold text-white mb-4">Legal</h4>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">Terms of Service</a>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">Privacy Policy</a>
-            <a href="#" class="block py-1 text-sm hover:text-amber-400">Risk Disclosure</a>
-            <p class="text-xs mt-6">Investments involve risk. Past performance is not indicative of future results.</p>
-        </div>
-        <div>
-            <h4 class="font-semibold text-white mb-4">Connect</h4>
-            <p class="text-sm">support@omegaglobal.com</p>
-            <p class="text-xs mt-8">© 2026 Omega Global. All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+    </section>
 
-<script>
-    // Simple mobile menu toggle
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
-    });
-</script>
+    <!-- LIVE WITHDRAWAL PROOF -->
+    <section id="withdrawals">
+        <h2 class="section-title">Live Withdrawal Proof</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width:1100px; margin:0 auto;">
+            <div class="withdrawal-card">
+                <p><strong>Germany • €2,850</strong><br>Premium Plan Withdrawal • Processed in 48 hours</p>
+                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"On-chain verified and received promptly. Excellent service!" — Michael S.</p>
+            </div>
+            <div class="withdrawal-card">
+                <p><strong>USA • $1,920</strong><br>Fast Track Plan • 7-day lock completed</p>
+                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Fast and transparent. Highly recommended." — Sarah T.</p>
+            </div>
+            <div class="withdrawal-card">
+                <p><strong>Switzerland • €12,400</strong><br>Elite Plan • Full principal + profits</p>
+                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Professional team and real results." — Luca R.</p>
+            </div>
+            <div class="withdrawal-card">
+                <p><strong>UAE • AED 45,000</strong><br>Omega Whale Plan • Processed smoothly</p>
+                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Best experience with any crypto platform." — Ahmed A.</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:40px; font-size:0.95rem; opacity:0.8;">All withdrawals are on-chain verifiable. Examples shown are representative of recent activity (actual amounts and times vary).</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background:var(--charcoal);">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div style="max-width:900px; margin:0 auto;">
+            <div class="faq-item"><strong>How do I start?</strong><p>Register, complete KYC, choose a plan, and deposit. Minimum €500 for most structured plans.</p></div>
+            <div class="faq-item"><strong>Are funds safe?</strong><p>Yes — multi-signature custody, mandatory KYC, 2FA, and full on-chain transparency.</p></div>
+            <div class="faq-item"><strong>How fast are withdrawals?</strong><p>Usually 24-72 hours after lock period, subject to verification.</p></div>
+            <div class="faq-item"><strong>Do you guarantee returns?</strong><p>No. Yields are estimates. Cryptocurrency involves risk of capital loss.</p></div>
+            <div class="faq-item"><strong>Can I refer friends?</strong><p>Yes — earn 7% commission on their first investment.</p></div>
+        </div>
+    </section>
+
+    <!-- RISK DISCLAIMER -->
+    <section>
+        <h2 class="section-title">Important Risk Disclosure</h2>
+        <div style="max-width:1000px; margin:0 auto; background:#0A1428; padding:50px; border-radius:12px; text-align:center;">
+            <p>Cryptocurrency investments involve significant risk and may result in partial or total loss of capital. Returns shown are estimates and not guaranteed. Past performance is not indicative of future results. KYC and 2FA are mandatory. This website does not constitute investment advice. Consult a qualified financial advisor before investing.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2 class="section-title">Professional Support</h2>
+        <div style="text-align:center;">
+            <p style="font-size:1.25rem;">📧 omegaglobalsupport11@gmail.com<br>📞 +44 7385 738214 (United Kingdom)</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links" style="margin-bottom:30px;">
+            <a href="#about">About Us</a>
+            <a href="#plans">Plans</a>
+            <a href="#why">Why Us</a>
+            <a href="#withdrawals">Live Proof</a>
+            <a href="#faq">FAQ</a>
+            <a href="#">Contact</a>
+        </div>
+        <p><strong>Omega Global Rectification</strong> — European Precision in Digital Asset Management</p>
+        <p style="margin:15px 0;">© 2026 All Rights Reserved | Minimum deposit €500</p>
+        <p>Qualified investors only. High risk of capital loss.</p>
+    </footer>
 
 </body>
-                  </html>
+        </html>
