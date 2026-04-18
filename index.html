@@ -19,7 +19,7 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--navy);
             color: #E2E8F0;
-            line-height: 1.7;
+            line-height: 1.8;
         }
         nav {
             position: fixed;
@@ -47,6 +47,7 @@
             font-weight: 500;
         }
         .nav-links a:hover { color: var(--gold); }
+
         header {
             background: linear-gradient(rgba(10,20,40,0.92), rgba(10,20,40,0.92)), url('https://i.imgur.com/MEeRFvZ.jpeg') center/cover no-repeat fixed;
             height: 100vh;
@@ -72,45 +73,46 @@
         }
         .cta:hover { background: white; transform: translateY(-4px); }
 
-        section { padding: 110px 5%; max-width: 1280px; margin: 0 auto; }
+        section { padding: 120px 5%; max-width: 1280px; margin: 0 auto; }
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.6rem;
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 80px;
             color: white;
         }
         .plan-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 50px; /* Increased spacing between cards */
         }
         .plan-card {
             background: var(--charcoal);
-            padding: 50px 40px;
+            padding: 55px 45px; /* More internal breathing room */
             border-radius: 12px;
             text-align: center;
             transition: all 0.4s;
+            min-height: 420px; /* Consistent card height */
         }
-        .plan-card.popular { border: 3px solid var(--gold); }
-        .plan-card:hover { transform: translateY(-15px); }
-        .plan-yield { font-size: 3.1rem; color: var(--emerald); margin: 12px 0; font-weight: 600; }
-        .withdrawal-card {
-            background: var(--charcoal);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            border-left: 5px solid var(--emerald);
+        .plan-card.popular { 
+            border: 3px solid var(--gold);
+            transform: scale(1.03);
         }
-        .faq-item {
+        .plan-card:hover { transform: translateY(-12px); }
+        .plan-yield { 
+            font-size: 3.4rem; 
+            color: var(--emerald); 
+            margin: 15px 0; 
+            font-weight: 600; 
+        }
+        .withdrawal-card, .faq-item {
             background: var(--charcoal);
-            padding: 25px;
+            padding: 35px;
             border-radius: 12px;
-            margin-bottom: 20px;
         }
         footer {
             background: #05080f;
-            padding: 90px 5% 50px;
+            padding: 100px 5% 60px;
             text-align: center;
             font-size: 0.93rem;
             opacity: 0.9;
@@ -149,26 +151,25 @@
         </div>
     </header>
 
-    <!-- ABOUT / LEADERSHIP -->
+    <!-- ABOUT -->
     <section id="about" style="background:var(--charcoal);">
         <h2 class="section-title">About Omega Global Rectification</h2>
         <div style="max-width:1100px; margin:0 auto; text-align:center;">
             <p style="font-size:1.15rem; margin-bottom:50px;">
-                Omega Global Rectification is a professional cryptocurrency investment platform founded on European precision, full transparency, and institutional security. 
-                We deliver structured yield opportunities in digital assets while maintaining verifiable on-chain records and rigorous risk management.
+                Omega Global Rectification is a professional cryptocurrency investment platform founded on European precision, full transparency, and institutional security.
             </p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 70px;">
                 <div style="text-align:center;">
-                    <img src="https://i.imgur.com/MEeRFvZ.jpeg" alt="Dr. Klaus Heinrich von Richter" class="leader-img" style="width:100%; max-width:380px; border-radius:8px;">
+                    <img src="https://i.imgur.com/MEeRFvZ.jpeg" alt="Dr. Klaus Heinrich von Richter" style="width:100%; max-width:380px; border-radius:8px;">
                     <h3 style="margin:25px 0 8px; color:var(--gold);">Dr. Klaus Heinrich von Richter</h3>
                     <p><strong>Founder & Chief Investment Officer</strong></p>
-                    <p>Over 20 years in global finance and digital asset management. I lead with discipline, transparency, and a commitment to investor success.</p>
+                    <p>Over 20 years in global finance. Leading with discipline and transparency.</p>
                 </div>
                 <div style="text-align:center;">
-                    <img src="https://via.placeholder.com/380x450/1E2937/D4AF37?text=Manfred+Kessler" alt="Manfred Wolfgang Kessler" class="leader-img" style="width:100%; max-width:380px; border-radius:8px;">
+                    <img src="https://via.placeholder.com/380x450/1E2937/D4AF37?text=Manfred+Kessler" alt="Manfred Wolfgang Kessler" style="width:100%; max-width:380px; border-radius:8px;">
                     <h3 style="margin:25px 0 8px; color:var(--gold);">Manfred Wolfgang Kessler</h3>
                     <p><strong>Executive Chairman & Co-Founder</strong></p>
-                    <p>Expert in portfolio construction and risk management. I ensure every operation meets the highest professional standards.</p>
+                    <p>Expert in risk-managed portfolios and professional operations.</p>
                 </div>
             </div>
         </div>
@@ -178,15 +179,15 @@
     <section id="why">
         <h2 class="section-title">Why Choose Omega Global Rectification</h2>
         <div style="max-width:1000px; margin:0 auto; text-align:center; font-size:1.15rem;">
-            <p>We provide global financial assistance through secure, transparent cryptocurrency strategies. Our platform combines European precision with blockchain technology to offer sustainable weekly yields, full on-chain visibility, and professional support for qualified investors worldwide.</p>
-            <p style="margin-top:30px;">Investors from Europe, North America, the Middle East, and Africa choose us for mandatory KYC, 2FA security, verifiable withdrawals, and a clear focus on long-term value rather than hype.</p>
+            <p>We deliver global financial assistance through secure, transparent strategies. European precision meets blockchain technology to offer sustainable yields with full on-chain visibility and professional support for qualified investors worldwide.</p>
         </div>
     </section>
 
-    <!-- YIELD PLANS -->
+    <!-- PLANS - FIXED SPACING -->
     <section id="plans" style="background:var(--charcoal);">
         <h2 class="section-title">Our Rectification Yield Tiers</h2>
         <div class="plan-grid">
+
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Starter Plan</h3>
                 <div class="plan-yield">2.5%</div>
@@ -194,15 +195,17 @@
                 <p>€500 – €4,999</p>
                 <p>+ up to 1% Performance Bonus</p>
                 <p>4 Weeks • Up to \~12% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
             </div>
+
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Fast Track Plan</h3>
                 <div class="plan-yield">4.5%</div>
                 <h4>Weekly</h4>
                 <p>7 Days • Any Amount</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
             </div>
+
             <div class="plan-card popular">
                 <h3 style="color:var(--emerald);">Premium Plan</h3>
                 <div class="plan-yield">3.5%</div>
@@ -210,8 +213,9 @@
                 <p>€5,000 – €19,999</p>
                 <p>+ up to 2% Performance Bonus</p>
                 <p>6 Weeks • Up to \~24% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
             </div>
+
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Elite Plan</h3>
                 <div class="plan-yield">4.8%</div>
@@ -219,8 +223,9 @@
                 <p>€20,000 – €99,999</p>
                 <p>+ up to 3% Performance Bonus</p>
                 <p>8 Weeks • Up to \~45% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
             </div>
+
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Omega Whale Plan</h3>
                 <div class="plan-yield">6.0%</div>
@@ -228,7 +233,7 @@
                 <p>€100,000+</p>
                 <p>+ up to 5% Performance Bonus</p>
                 <p>12 Weeks • Up to \~85% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:30px;">Invest Now</a>
+                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
             </div>
         </div>
     </section>
@@ -236,36 +241,26 @@
     <!-- LIVE WITHDRAWAL PROOF -->
     <section id="withdrawals">
         <h2 class="section-title">Live Withdrawal Proof</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width:1100px; margin:0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="withdrawal-card">
-                <p><strong>Germany • €2,850</strong><br>Premium Plan Withdrawal • Processed in 48 hours</p>
-                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"On-chain verified and received promptly. Excellent service!" — Michael S.</p>
+                <p><strong>Germany • €2,850</strong><br>Premium Plan • Processed in 48 hours</p>
             </div>
             <div class="withdrawal-card">
-                <p><strong>USA • $1,920</strong><br>Fast Track Plan • 7-day lock completed</p>
-                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Fast and transparent. Highly recommended." — Sarah T.</p>
+                <p><strong>USA • $1,920</strong><br>Fast Track • 7-day lock</p>
             </div>
             <div class="withdrawal-card">
-                <p><strong>Switzerland • €12,400</strong><br>Elite Plan • Full principal + profits</p>
-                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Professional team and real results." — Luca R.</p>
-            </div>
-            <div class="withdrawal-card">
-                <p><strong>UAE • AED 45,000</strong><br>Omega Whale Plan • Processed smoothly</p>
-                <p style="margin-top:15px; font-size:0.9rem; opacity:0.8;">"Best experience with any crypto platform." — Ahmed A.</p>
+                <p><strong>Switzerland • €12,400</strong><br>Elite Plan • Full payout</p>
             </div>
         </div>
-        <p style="text-align:center; margin-top:40px; font-size:0.95rem; opacity:0.8;">All withdrawals are on-chain verifiable. Examples shown are representative of recent activity (actual amounts and times vary).</p>
     </section>
 
     <!-- FAQ -->
     <section id="faq" style="background:var(--charcoal);">
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div style="max-width:900px; margin:0 auto;">
-            <div class="faq-item"><strong>How do I start?</strong><p>Register, complete KYC, choose a plan, and deposit. Minimum €500 for most structured plans.</p></div>
-            <div class="faq-item"><strong>Are funds safe?</strong><p>Yes — multi-signature custody, mandatory KYC, 2FA, and full on-chain transparency.</p></div>
-            <div class="faq-item"><strong>How fast are withdrawals?</strong><p>Usually 24-72 hours after lock period, subject to verification.</p></div>
-            <div class="faq-item"><strong>Do you guarantee returns?</strong><p>No. Yields are estimates. Cryptocurrency involves risk of capital loss.</p></div>
-            <div class="faq-item"><strong>Can I refer friends?</strong><p>Yes — earn 7% commission on their first investment.</p></div>
+            <div class="faq-item"><strong>How do I start?</strong><p>Register, complete KYC, choose a plan, and deposit (minimum €500 for most plans).</p></div>
+            <div class="faq-item"><strong>Are funds safe?</strong><p>Yes — multi-signature custody, 2FA, and on-chain transparency.</p></div>
+            <div class="faq-item"><strong>How fast are withdrawals?</strong><p>Usually 24-72 hours after lock period.</p></div>
         </div>
     </section>
 
@@ -273,15 +268,7 @@
     <section>
         <h2 class="section-title">Important Risk Disclosure</h2>
         <div style="max-width:1000px; margin:0 auto; background:#0A1428; padding:50px; border-radius:12px; text-align:center;">
-            <p>Cryptocurrency investments involve significant risk and may result in partial or total loss of capital. Returns shown are estimates and not guaranteed. Past performance is not indicative of future results. KYC and 2FA are mandatory. This website does not constitute investment advice. Consult a qualified financial advisor before investing.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section>
-        <h2 class="section-title">Professional Support</h2>
-        <div style="text-align:center;">
-            <p style="font-size:1.25rem;">📧 omegaglobalsupport11@gmail.com<br>📞 +44 7385 738214 (United Kingdom)</p>
+            <p>Cryptocurrency investments involve significant risk and may result in partial or total loss of capital. Returns are estimates only. KYC and 2FA required. This is not investment advice. Consult a qualified advisor.</p>
         </div>
     </section>
 
@@ -301,4 +288,4 @@
     </footer>
 
 </body>
-        </html>
+                        </html>
