@@ -15,179 +15,122 @@
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--navy);
-            color: #E2E8F0;
-            line-height: 1.8;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: #E2E8F0; line-height: 1.8; }
+        
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,20,40,0.98);
-            padding: 18px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212,175,55,0.2);
+            position: fixed; top: 0; width: 100%; background: rgba(10,20,40,0.98);
+            padding: 18px 5%; display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.2);
         }
-        .logo {
-            font-size: 2.3rem;
-            color: var(--gold);
-            cursor: pointer;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+        .logo { font-size: 2.3rem; color: var(--gold); cursor: pointer; font-family: 'Playfair Display', serif; font-weight: 700; }
+        .menu-btn { font-size: 1.8rem; color: var(--gold); cursor: pointer; background: none; border: none; }
+        
+        .side-menu {
+            position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100%;
+            background: var(--charcoal); padding: 80px 20px 30px; transition: 0.4s; box-shadow: -10px 0 30px rgba(0,0,0,0.6);
+            z-index: 2000;
         }
-        .nav-links a {
-            color: #E2E8F0;
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
+        .side-menu.open { right: 0; }
+        .side-menu a {
+            display: block; padding: 18px 0; color: #E2E8F0; text-decoration: none; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .nav-links a:hover { color: var(--gold); }
+        .side-menu a:hover { color: var(--gold); }
 
         header {
             background: linear-gradient(rgba(10,20,40,0.92), rgba(10,20,40,0.92)), url('https://i.imgur.com/MEeRFvZ.jpeg') center/cover no-repeat fixed;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 70px;
+            height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 70px;
         }
         .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10,20,40,0.7), rgba(10,20,40,0.9)); }
         .content { position: relative; z-index: 2; max-width: 920px; padding: 0 20px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.3rem; margin-bottom: 20px; color: white; }
-        .tagline { font-size: 1.4rem; margin-bottom: 45px; opacity: 0.95; }
-        .cta {
-            background: var(--gold);
-            color: #0A1428;
-            padding: 18px 50px;
-            font-size: 1.15rem;
-            font-weight: 600;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.3s;
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.3rem; color: white; margin-bottom: 15px; }
+        .tagline { font-size: 1.4rem; opacity: 0.95; }
+
+        section { padding: 110px 5%; max-width: 1280px; margin: 0 auto; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.6rem; text-align: center; margin-bottom: 70px; color: white; }
+        
+        .plan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 55px; }
+        .plan-card {
+            background: var(--charcoal); padding: 60px 45px; border-radius: 12px; text-align: center;
+            transition: all 0.4s; min-height: 440px;
         }
+        .plan-card.popular { border: 3px solid var(--gold); }
+        .plan-yield { font-size: 3.6rem; color: var(--emerald); margin: 15px 0; font-weight: 600; }
+        .cta { background: var(--gold); color: #0A1428; padding: 18px 50px; font-size: 1.15rem; font-weight: 600; border-radius: 6px; text-decoration: none; margin-top: 35px; display: inline-block; }
         .cta:hover { background: white; transform: translateY(-4px); }
 
-        section { padding: 120px 5%; max-width: 1280px; margin: 0 auto; }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            text-align: center;
-            margin-bottom: 80px;
-            color: white;
-        }
-        .plan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 50px; /* Increased spacing between cards */
-        }
-        .plan-card {
-            background: var(--charcoal);
-            padding: 55px 45px; /* More internal breathing room */
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.4s;
-            min-height: 420px; /* Consistent card height */
-        }
-        .plan-card.popular { 
-            border: 3px solid var(--gold);
-            transform: scale(1.03);
-        }
-        .plan-card:hover { transform: translateY(-12px); }
-        .plan-yield { 
-            font-size: 3.4rem; 
-            color: var(--emerald); 
-            margin: 15px 0; 
-            font-weight: 600; 
-        }
-        .withdrawal-card, .faq-item {
-            background: var(--charcoal);
-            padding: 35px;
-            border-radius: 12px;
-        }
-        footer {
-            background: #05080f;
-            padding: 100px 5% 60px;
-            text-align: center;
-            font-size: 0.93rem;
-            opacity: 0.9;
-        }
-        .footer-links a {
-            color: #E2E8F0;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .footer-links a:hover { color: var(--gold); }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center; }
+        .faq-item, .withdrawal-card { background: var(--charcoal); padding: 30px; border-radius: 12px; margin-bottom: 20px; }
+        footer { background: #05080f; padding: 100px 5% 60px; text-align: center; font-size: 0.93rem; opacity: 0.9; }
     </style>
 </head>
 <body>
 
     <!-- NAVIGATION -->
     <nav>
-        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Ω Omega Global Rectification</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#plans">Plans</a>
-            <a href="#why">Why Us</a>
-            <a href="#withdrawals">Live Proof</a>
-            <a href="#faq">FAQ</a>
-            <a href="#" onclick="alert('Login coming soon – contact support for access')">Login</a>
-            <a href="#" onclick="alert('Register via omegaglobalsupport11@gmail.com')">Register</a>
-        </div>
+        <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">Ω Omega Global Rectification</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <a href="#about" onclick="toggleMenu()">About Us</a>
+        <a href="#plans" onclick="toggleMenu()">Investment Plans</a>
+        <a href="#why" onclick="toggleMenu()">Why Choose Us</a>
+        <a href="#withdrawals" onclick="toggleMenu()">Live Withdrawal Proof</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#" onclick="toggleMenu();alert('Login coming soon – contact support')">Login</a>
+        <a href="#" onclick="toggleMenu();alert('Register via omegaglobalsupport11@gmail.com')">Register</a>
+    </div>
 
     <!-- HERO -->
     <header>
         <div class="overlay"></div>
         <div class="content">
-            <h1>Precision Wealth in Digital Assets</h1>
-            <p class="tagline">European discipline. On-chain transparency. Sustainable growth for global investors.</p>
+            <h1>Ω Omega Global Rectification</h1>
+            <p class="tagline">Precision Wealth in Digital Assets</p>
             <a href="#plans" class="cta">Explore Yield Tiers</a>
         </div>
     </header>
 
-    <!-- ABOUT -->
+    <!-- ABOUT / LEADERSHIP -->
     <section id="about" style="background:var(--charcoal);">
-        <h2 class="section-title">About Omega Global Rectification</h2>
-        <div style="max-width:1100px; margin:0 auto; text-align:center;">
-            <p style="font-size:1.15rem; margin-bottom:50px;">
-                Omega Global Rectification is a professional cryptocurrency investment platform founded on European precision, full transparency, and institutional security.
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 70px;">
-                <div style="text-align:center;">
-                    <img src="https://i.imgur.com/MEeRFvZ.jpeg" alt="Dr. Klaus Heinrich von Richter" style="width:100%; max-width:380px; border-radius:8px;">
-                    <h3 style="margin:25px 0 8px; color:var(--gold);">Dr. Klaus Heinrich von Richter</h3>
-                    <p><strong>Founder & Chief Investment Officer</strong></p>
-                    <p>Over 20 years in global finance. Leading with discipline and transparency.</p>
-                </div>
-                <div style="text-align:center;">
-                    <img src="https://via.placeholder.com/380x450/1E2937/D4AF37?text=Manfred+Kessler" alt="Manfred Wolfgang Kessler" style="width:100%; max-width:380px; border-radius:8px;">
-                    <h3 style="margin:25px 0 8px; color:var(--gold);">Manfred Wolfgang Kessler</h3>
-                    <p><strong>Executive Chairman & Co-Founder</strong></p>
-                    <p>Expert in risk-managed portfolios and professional operations.</p>
-                </div>
+        <h2 class="section-title">Our Leadership Team</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 70px;">
+            <div style="text-align:center;">
+                <img src="https://i.imgur.com/MEeRFvZ.jpeg" alt="Dr. Klaus Heinrich von Richter" style="width:100%; max-width:380px; border-radius:8px;">
+                <h3 style="margin:25px 0 8px; color:var(--gold);">Dr. Klaus Heinrich von Richter</h3>
+                <p><strong>Founder & Chief Investment Officer</strong></p>
+                <p>20+ years in global finance. Leading with discipline and transparency.</p>
+            </div>
+            <div style="text-align:center;">
+                <img src="https://via.placeholder.com/380x450/1E2937/D4AF37?text=Manfred+Kessler" alt="Manfred Wolfgang Kessler" style="width:100%; max-width:380px; border-radius:8px;">
+                <h3 style="margin:25px 0 8px; color:var(--gold);">Manfred Wolfgang Kessler</h3>
+                <p><strong>Executive Chairman & Co-Founder</strong></p>
+                <p>Expert in risk-managed portfolios and professional operations.</p>
+            </div>
+            <div style="text-align:center;">
+                <h3 style="margin:25px 0 8px; color:var(--gold);">Belgacem Amari</h3>
+                <p><strong>Co-Founder & CEO</strong></p>
+                <p>Driving global expansion and investor relations with integrity and vision.</p>
             </div>
         </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section id="why">
-        <h2 class="section-title">Why Choose Omega Global Rectification</h2>
-        <div style="max-width:1000px; margin:0 auto; text-align:center; font-size:1.15rem;">
-            <p>We deliver global financial assistance through secure, transparent strategies. European precision meets blockchain technology to offer sustainable yields with full on-chain visibility and professional support for qualified investors worldwide.</p>
+    <!-- SECURITY FEATURES -->
+    <section>
+        <h2 class="section-title">Institutional Security</h2>
+        <div class="feature-grid">
+            <div><h3>🔍 KYC Verification</h3><p>Mandatory identity check</p></div>
+            <div><h3>🔐 2-Factor Authentication</h3><p>Every account protected</p></div>
+            <div><h3>🔗 Wallet Connect</h3><p>Secure direct wallet connection</p></div>
         </div>
     </section>
 
-    <!-- PLANS - FIXED SPACING -->
+    <!-- PLANS (spacious & premium) -->
     <section id="plans" style="background:var(--charcoal);">
         <h2 class="section-title">Our Rectification Yield Tiers</h2>
         <div class="plan-grid">
-
+            <!-- Starter -->
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Starter Plan</h3>
                 <div class="plan-yield">2.5%</div>
@@ -195,17 +138,17 @@
                 <p>€500 – €4,999</p>
                 <p>+ up to 1% Performance Bonus</p>
                 <p>4 Weeks • Up to \~12% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
+                <a href="#" class="cta">Invest Now</a>
             </div>
-
+            <!-- Fast Track -->
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Fast Track Plan</h3>
                 <div class="plan-yield">4.5%</div>
                 <h4>Weekly</h4>
                 <p>7 Days • Any Amount</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
+                <a href="#" class="cta">Invest Now</a>
             </div>
-
+            <!-- Premium -->
             <div class="plan-card popular">
                 <h3 style="color:var(--emerald);">Premium Plan</h3>
                 <div class="plan-yield">3.5%</div>
@@ -213,9 +156,9 @@
                 <p>€5,000 – €19,999</p>
                 <p>+ up to 2% Performance Bonus</p>
                 <p>6 Weeks • Up to \~24% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
+                <a href="#" class="cta">Invest Now</a>
             </div>
-
+            <!-- Elite -->
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Elite Plan</h3>
                 <div class="plan-yield">4.8%</div>
@@ -223,9 +166,9 @@
                 <p>€20,000 – €99,999</p>
                 <p>+ up to 3% Performance Bonus</p>
                 <p>8 Weeks • Up to \~45% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
+                <a href="#" class="cta">Invest Now</a>
             </div>
-
+            <!-- Omega Whale -->
             <div class="plan-card">
                 <h3 style="color:var(--emerald);">Omega Whale Plan</h3>
                 <div class="plan-yield">6.0%</div>
@@ -233,7 +176,7 @@
                 <p>€100,000+</p>
                 <p>+ up to 5% Performance Bonus</p>
                 <p>12 Weeks • Up to \~85% Total</p>
-                <a href="#" class="cta" style="background:var(--emerald); color:#0A1428; margin-top:35px;">Invest Now</a>
+                <a href="#" class="cta">Invest Now</a>
             </div>
         </div>
     </section>
@@ -241,16 +184,10 @@
     <!-- LIVE WITHDRAWAL PROOF -->
     <section id="withdrawals">
         <h2 class="section-title">Live Withdrawal Proof</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div class="withdrawal-card">
-                <p><strong>Germany • €2,850</strong><br>Premium Plan • Processed in 48 hours</p>
-            </div>
-            <div class="withdrawal-card">
-                <p><strong>USA • $1,920</strong><br>Fast Track • 7-day lock</p>
-            </div>
-            <div class="withdrawal-card">
-                <p><strong>Switzerland • €12,400</strong><br>Elite Plan • Full payout</p>
-            </div>
+        <div class="plan-grid">
+            <div class="withdrawal-card"><p><strong>Germany • €2,850</strong><br>Premium Plan – Processed in 48 hours</p></div>
+            <div class="withdrawal-card"><p><strong>USA • $1,920</strong><br>Fast Track – 7-day lock</p></div>
+            <div class="withdrawal-card"><p><strong>Switzerland • €12,400</strong><br>Elite Plan – Full payout</p></div>
         </div>
     </section>
 
@@ -258,9 +195,17 @@
     <section id="faq" style="background:var(--charcoal);">
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div style="max-width:900px; margin:0 auto;">
-            <div class="faq-item"><strong>How do I start?</strong><p>Register, complete KYC, choose a plan, and deposit (minimum €500 for most plans).</p></div>
-            <div class="faq-item"><strong>Are funds safe?</strong><p>Yes — multi-signature custody, 2FA, and on-chain transparency.</p></div>
-            <div class="faq-item"><strong>How fast are withdrawals?</strong><p>Usually 24-72 hours after lock period.</p></div>
+            <div class="faq-item"><strong>How do I start?</strong><p>Register, complete KYC, choose a plan and deposit.</p></div>
+            <div class="faq-item"><strong>Are funds safe?</strong><p>Yes – KYC, 2FA, multi-signature custody and on-chain transparency.</p></div>
+        </div>
+    </section>
+
+    <!-- WHY US & CERTIFICATE -->
+    <section id="why">
+        <h2 class="section-title">Why Choose Omega Global Rectification</h2>
+        <div style="max-width:1000px; margin:0 auto; text-align:center; font-size:1.15rem;">
+            <p>We provide global financial assistance with European precision, full on-chain transparency, and institutional security. Our platform is designed for qualified investors who value trust, professionalism, and sustainable returns.</p>
+            <p style="margin-top:30px;">Company Certificate: Registered under European financial oversight • Operational headquarters in the United Kingdom.</p>
         </div>
     </section>
 
@@ -268,24 +213,29 @@
     <section>
         <h2 class="section-title">Important Risk Disclosure</h2>
         <div style="max-width:1000px; margin:0 auto; background:#0A1428; padding:50px; border-radius:12px; text-align:center;">
-            <p>Cryptocurrency investments involve significant risk and may result in partial or total loss of capital. Returns are estimates only. KYC and 2FA required. This is not investment advice. Consult a qualified advisor.</p>
+            <p>Cryptocurrency investments involve significant risk and may result in partial or total loss of capital. Returns are estimates only and not guaranteed. KYC and 2FA are mandatory. This is not investment advice. Consult a qualified advisor.</p>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-links" style="margin-bottom:30px;">
-            <a href="#about">About Us</a>
-            <a href="#plans">Plans</a>
-            <a href="#why">Why Us</a>
-            <a href="#withdrawals">Live Proof</a>
-            <a href="#faq">FAQ</a>
-            <a href="#">Contact</a>
+    <!-- CONTACT -->
+    <section>
+        <h2 class="section-title">Professional Support</h2>
+        <div style="text-align:center;">
+            <p style="font-size:1.25rem;">📧 omegaglobalsupport11@gmail.com<br>📞 +44 7385 738214 (UK)</p>
         </div>
+    </section>
+
+    <footer>
         <p><strong>Omega Global Rectification</strong> — European Precision in Digital Asset Management</p>
         <p style="margin:15px 0;">© 2026 All Rights Reserved | Minimum deposit €500</p>
         <p>Qualified investors only. High risk of capital loss.</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
 </body>
-                        </html>
+    </html>
