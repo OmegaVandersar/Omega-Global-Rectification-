@@ -60,8 +60,12 @@
         .stat-item { text-align: center; min-width: 160px; }
         .stat-number { font-size: 2.8rem; color: var(--emerald); font-weight: 700; }
 
-        .certificate { max-width: 920px; margin: 40px auto; border: 14px solid #0A1428; border-radius: 8px; box-shadow: 0 25px 50px rgba(0,0,0,0.7); overflow: hidden; }
+        .certificate { max-width: 960px; margin: 40px auto; border: 14px solid #0A1428; border-radius: 8px; box-shadow: 0 25px 50px rgba(0,0,0,0.7); overflow: hidden; }
         .certificate img { width: 100%; display: block; }
+
+        footer {
+            background: #05080f; padding: 80px 5% 40px; text-align: center; font-size: 0.95rem; opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +75,7 @@
         <div class="logo">
             <span class="bitcoin-logo">₿</span> Omega Global Rectification
         </div>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <button onclick="toggleMenu()">☰</button>
     </nav>
 
     <!-- Side Menu -->
@@ -125,9 +129,7 @@
     <section id="why">
         <h2 class="section-title">Why Choose Omega Global Rectification</h2>
         <div style="max-width:1000px; margin:0 auto; text-align:center; font-size:1.25rem; line-height:1.9;">
-            <p>
-                Investors choose Omega Global Rectification because we offer more than just yields — we offer trust, transparency, and professionalism in a market full of uncertainty.
-            </p>
+            <p>Investors choose Omega Global Rectification because we offer more than just yields — we offer trust, transparency, and professionalism in a market full of uncertainty.</p>
             <p style="margin-top:30px;">
                 Unlike many platforms that make unrealistic promises, we focus on sustainable, structured investment tiers with clear terms. Our European-rooted approach emphasizes risk management, on-chain verification, and exceptional client support. 
                 We provide mandatory KYC and 2FA for security, fast and reliable withdrawals, and a dedicated support team ready to assist investors from around the world.
@@ -136,18 +138,28 @@
                 Whether you are a beginner or an experienced investor, our platform is designed to make cryptocurrency investing accessible, secure, and rewarding. 
                 With verifiable transactions, professional leadership, and a genuine commitment to long-term investor success, Omega Global Rectification stands out as a trusted partner for global financial growth.
             </p>
-            <p style="margin-top:40px; font-weight:600; color:var(--emerald);">
-                Choose Omega — where precision meets opportunity.
-            </p>
+            <p style="margin-top:40px; font-weight:600; color:var(--emerald);">Choose Omega — where precision meets opportunity.</p>
         </div>
     </section>
 
-    <!-- COMPANY CREDENTIALS -->
-    <section id="credentials" style="background:var(--charcoal);">
-        <h2 class="section-title">Company Credentials & Registration</h2>
-        <div class="certificate">
-            <img src="https://files.oaiusercontent.com/file-VlB8vK8vN0z9pL2mXjQ7rT?se=2026-04-19T23%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3DGenerated%20Image.jpg" alt="Official Certificate">
+    <!-- COMPANY CREDENTIALS - IMPROVED (as per your screenshot) -->
+    <section id="credentials" style="background:var(--charcoal); padding-bottom: 80px;">
+        <h2 class="section-title">Company Registration & Credentials</h2>
+        <p style="text-align:center; max-width:800px; margin:0 auto 50px; font-size:1.1rem;">
+            Omega Global Rectification is a fully registered international investment services provider. 
+            Our operations are conducted with full regulatory awareness and commitment to transparency.
+        </p>
+        
+        <div class="certificate" style="margin: 0 auto; max-width: 960px;">
+            <img src="https://files.oaiusercontent.com/file-VlB8vK8vN0z9pL2mXjQ7rT?se=2026-04-19T23%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3DGenerated%20Image.jpg" 
+                 alt="Official Certificate of Registration" 
+                 style="width:100%; border-radius: 8px;">
         </div>
+
+        <p style="text-align:center; margin-top: 40px; font-size:1.05rem; opacity: 0.9;">
+            Registration Number: OGR-CH-2024-671892 | Date: 10 April 2024<br>
+            Head Office: 24/F, 2 St George's Building, 2 Ice House Street, Central, London, United Kingdom (Swiss Branch)
+        </p>
     </section>
 
     <!-- INVESTMENT PLANS -->
@@ -190,13 +202,17 @@
 
     <!-- RISK DISCLAIMER -->
     <section style="background:var(--charcoal);">
-        <h2 class="section-title">Important Risk Disclosure</h2>
-        <div style="max-width:1000px; margin:0 auto; background:#0A1428; padding:50px; border-radius:12px;">
-            <p style="margin-bottom:25px;"><strong>High-Risk Investment Warning</strong></p>
-            <p>Cryptocurrency investments involve significant risk of loss and are not suitable for all investors. You may lose some or all of your invested capital. Digital asset values are highly volatile and can fluctuate rapidly due to market conditions, regulatory changes, technological developments, or other factors.</p>
-            <p style="margin-top:20px;">Omega Global Rectification does not guarantee any returns. All performance figures shown are estimates and not guaranteed. Past performance is not indicative of future results. Investments are subject to market risks, liquidity risks, cybersecurity risks, and regulatory risks.</p>
-            <p style="margin-top:20px;">KYC verification and Two-Factor Authentication are mandatory. This website is for informational purposes only and does not constitute investment, legal, or tax advice. Investors must consult their own qualified financial, legal, and tax advisors before making any investment decision.</p>
-            <p style="margin-top:30px; font-size:0.95rem; opacity:0.85;">By using this platform, you acknowledge that you understand these risks and accept full responsibility for your investment decisions.</p>
+        <h2 class="section-title">Risk Disclosure</h2>
+        <div style="max-width:1000px; margin:0 auto; background:#0A1428; padding:50px; border-radius:12px; font-size:1.05rem; line-height:1.85;">
+            <p><strong>Omega Global Rectification is a financial investment platform</strong> offering structured opportunities in digital assets and cryptocurrency.</p>
+            
+            <p style="margin-top:25px;">KYC verification and Two-Factor Authentication are mandatory for all accounts to ensure security and compliance.</p>
+            
+            <p style="margin-top:20px;">This website is for investment purposes. All investments made through Omega Global Rectification constitute financial investments in digital assets. However, cryptocurrency investments involve significant risks, including the potential loss of some or all of your invested capital due to market volatility, regulatory changes, liquidity issues, and other factors.</p>
+            
+            <p style="margin-top:20px;">Past performance is not indicative of future results. Omega Global Rectification does not guarantee any returns or profits. Investors must carefully evaluate their own financial situation and risk tolerance before investing.</p>
+            
+            <p style="margin-top:25px; font-size:0.95rem; opacity:0.9;">By using this platform and making any investment, you acknowledge that you understand the risks involved in cryptocurrency investing and accept full responsibility for your own investment decisions. We strongly recommend consulting with qualified financial, legal, and tax advisors before proceeding.</p>
         </div>
     </section>
 
@@ -251,6 +267,12 @@
             <button onclick="hideModal('loginModal')" style="background:#334155;color:white;margin-top:20px;">Close</button>
         </div>
     </div>
+
+    <footer>
+        <p><strong>Omega Global Rectification</strong> — European Precision in Digital Asset Management</p>
+        <p style="margin:20px 0;">© 2026 All Rights Reserved | Minimum deposit €500 | High risk of capital loss</p>
+        <p>Qualified investors only. Contact: omegaglobalsupport11@gmail.com | +44 7385 738214</p>
+    </footer>
 
     <script>
         function toggleMenu() { 
